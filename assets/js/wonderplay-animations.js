@@ -123,7 +123,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   // 4. BIRTHDAY CONFETTI CELEBRATION MOMENT (Runs once)
   // ==========================================================================
-  const partySections = document.querySelectorAll('#birthday-section, section:has(a[href*="parties.html"]), .birthday-celebration-zone');
+  const partySections = Array.from(document.querySelectorAll('section')).filter(sec => {
+    return sec.id === 'birthday-section' || 
+           sec.classList.contains('birthday-celebration-zone') || 
+           sec.querySelector('a[href*="parties.html"]');
+  });
   let confettiFired = false;
 
   function launchConfetti(container) {
@@ -218,7 +222,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   // 5. ABOUT TIMELINE SCROLL GROWTH
   // ==========================================================================
-  const timelineSection = document.querySelector('section:has(.w-14.h-14.rounded-2xl)');
+  const timelineSection = Array.from(document.querySelectorAll('section')).find(sec => {
+    return sec.querySelector('.w-12.h-12.rounded-full, .w-14.h-14.rounded-2xl');
+  });
   if (timelineSection && !isReducedMotion) {
     const timelineItems = timelineSection.querySelectorAll('.flex.items-start.gap-4');
     const timelineObserver = new IntersectionObserver((entries) => {
