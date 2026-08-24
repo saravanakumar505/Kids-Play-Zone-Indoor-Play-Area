@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home 2 - Interactive Adventure Club | WonderPlay - Kids Play Zone &amp; Indoor Adventure Park</title>
+  <meta name="description"
+    content="WonderPlay is a premier indoor playground and family adventure center featuring safe soft play, ninja courses, toddler zones, and birthday party rooms." />
+  <link rel="canonical" href="https://wonderplay.example.com/pages/home-2---interactive-adventure-club.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Home 2 - Interactive Adventure Club | WonderPlay" />
+  <meta property="og:description" content="Safe, colorful and exciting indoor playground for children ages 0-12." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/images/gallery/gallery-2.webp" />
+
+  <!-- Favicons in root and subdirectories -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png" />
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FF7043',
+            'primary-hover': '#E65A2E',
+            'primary-light': '#FFF0EB',
+            secondary: '#5B3FD3',
+            'secondary-hover': '#4B32B6',
+            'secondary-light': '#F3F0FF',
+            accent: '#FFB74D',
+            'accent-hover': '#FFA726',
+            'accent-light': '#FFF8E7',
+            mint: '#52D6B5',
+            'mint-light': '#E8F9F5',
+            cream: '#FFF8F0',
+            lavender: '#F3F0FF',
+            'dark-plum': '#211A38',
+            'deep-navy': '#15152B',
+            background: 'var(--background)',
+            surface: 'var(--surface)',
+            'surface-alt': 'var(--surface-alt)',
+            'surface-card': 'var(--surface-card)',
+            border: 'var(--border)',
+            'text-main': 'var(--text-main)',
+            'text-muted': 'var(--text-muted)',
+            'text-light': 'var(--text-light)',
+          },
+          fontFamily: {
+            heading: ['Fredoka', 'cursive', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "WonderPlay Kids Play Zone & Indoor Adventure Park",
+  "image": "https://wonderplay.example.com/assets/images/hero/hero-home.jpg",
+  "telephone": "+18009663377",
+  "email": "hello@wonderplay.example.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "742 Evergreen Adventure Blvd, Suite 100",
+    "addressLocality": "Sunshine Valley",
+    "addressRegion": "CA",
+    "postalCode": "90210",
+    "addressCountry": "US"
+  }
+}
+  </script>
+</head>
+
+<body class="bg-background text-text-main min-h-screen flex flex-col selection:bg-primary-light selection:text-primary">
+
+      <header id="main-header" class="sticky top-0 z-40 bg-surface border-b border-border">
+    <div class="navbar-container max-w-[1500px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2 lg:gap-4 xl:gap-6">
+      
+      <!-- LOGO -->
+      <a href="../index.html" class="navbar-logo flex items-center shrink-0">
+        <img src="../assets/images/logo/wonderplay-logo.svg" alt="WonderPlay Logo" class="h-9 sm:h-10 w-auto dark:hidden shrink-0" />
+        <img src="../assets/images/logo/wonderplay-logo-dark.svg" alt="WonderPlay Logo" class="h-9 sm:h-10 w-auto hidden dark:block shrink-0" />
+      </a>
+
+      <!-- DESKTOP NAVIGATION LINKS (Centered) -->
+      <nav class="navbar-links hidden xl:flex items-center justify-center gap-1.5 2xl:gap-3.5 text-[14px] 2xl:text-[15px] font-semibold whitespace-nowrap">
+        <!-- Home Dropdown -->
+        <div class="relative dropdown-wrapper">
+          <button class="nav-link-item dropdown-trigger inline-flex items-center gap-1 font-heading text-sm 2xl:text-base text-text-main hover:text-primary transition min-h-[44px]" aria-expanded="false" aria-haspopup="true">
+            <span>Home</span>
+            <i data-lucide="chevron-down" class="dropdown-arrow w-3.5 h-3.5 transition-transform duration-200"></i>
+          </button>
+          <div class="dropdown-menu absolute top-full left-0 w-64 p-3 bg-surface rounded-2xl shadow-xl border-2 border-border opacity-0 invisible pointer-events-none transition-all duration-200 z-50">
+            <a href="../index.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-primary-light transition group/item">
+              <div class="w-8 h-8 rounded-lg bg-primary-light text-primary flex items-center justify-center font-bold font-heading">1</div>
+              <div>
+                <div class="font-heading font-bold text-text-main text-sm group-hover/item:text-primary">Home 1 - Play Zone</div>
+                <div class="text-xs text-text-muted">Family playground landing</div>
+              </div>
+            </a>
+            <a href="home2.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-secondary-light transition group/item mt-1">
+              <div class="w-8 h-8 rounded-lg bg-secondary-light text-secondary flex items-center justify-center font-bold font-heading">2</div>
+              <div>
+                <div class="font-heading font-bold text-text-main text-sm group-hover/item:text-secondary">Home 2 - Adventure Club</div>
+                <div class="text-xs text-text-muted">Interactive family platform</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- ABOUT -->
+        <a href="about.html" class="nav-link-item inline-flex items-center font-heading text-sm 2xl:text-base text-text-main hover:text-primary transition min-h-[44px]">About</a>
+
+        <!-- PLAY ZONES -->
+        <a href="play-zones.html" class="nav-link-item inline-flex items-center font-heading text-sm 2xl:text-base text-text-main hover:text-primary transition min-h-[44px]">Play Zones</a>
+
+        <!-- PARTIES -->
+        <a href="parties.html" class="nav-link-item inline-flex items-center font-heading text-sm 2xl:text-base text-text-main hover:text-primary transition min-h-[44px]">Parties</a>
+
+        <!-- MEMBERSHIP -->
+        <a href="membership.html" class="nav-link-item inline-flex items-center font-heading text-sm 2xl:text-base text-text-main hover:text-primary transition min-h-[44px]">Membership</a>
+
+        <!-- SAFETY -->
+        <a href="safety.html" class="nav-link-item inline-flex items-center font-heading text-sm 2xl:text-base text-text-main hover:text-primary transition min-h-[44px]">Safety</a>
+
+        <!-- BLOG -->
+        <a href="blog.html" class="nav-link-item inline-flex items-center font-heading text-sm 2xl:text-base text-text-main hover:text-primary transition min-h-[44px]">Blog</a>
+
+        <!-- CONTACT -->
+        <a href="contact.html" class="nav-link-item inline-flex items-center font-heading text-sm 2xl:text-base text-text-main hover:text-primary transition min-h-[44px]">Contact</a>
+
+        <!-- DASHBOARD DROPDOWN -->
+        <div class="relative dropdown-wrapper">
+          <button class="nav-link-item dropdown-trigger inline-flex items-center gap-1 font-heading text-sm 2xl:text-base text-text-main hover:text-primary transition min-h-[44px]" aria-expanded="false" aria-haspopup="true">
+            <span>Dashboard</span>
+            <i data-lucide="chevron-down" class="dropdown-arrow w-3.5 h-3.5 transition-transform duration-200"></i>
+          </button>
+          <div class="dropdown-menu absolute top-full right-0 w-64 p-3 bg-surface rounded-2xl shadow-xl border-2 border-border opacity-0 invisible pointer-events-none transition-all duration-200 z-50">
+            <a href="../dashboard/index.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-secondary-light transition group/item">
+              <div class="w-8 h-8 rounded-lg bg-secondary-light text-secondary flex items-center justify-center font-bold">
+                <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="font-heading font-bold text-text-main text-sm group-hover/item:text-secondary">Parent Dashboard</div>
+                <div class="text-xs text-text-muted">Passes, family &amp; bookings</div>
+              </div>
+            </a>
+            <a href="../admin/index.html" class="flex items-start gap-3 p-2.5 rounded-xl hover:bg-primary-light transition group/item mt-1">
+              <div class="w-8 h-8 rounded-lg bg-primary-light text-primary flex items-center justify-center font-bold">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <div class="font-heading font-bold text-text-main text-sm group-hover/item:text-primary">Admin Dashboard</div>
+                <div class="text-xs text-text-muted">Operations &amp; management</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- RIGHT ACTION AREA -->
+      <div class="navbar-actions flex items-center gap-1.5 sm:gap-2 shrink-0 whitespace-nowrap">
+        <!-- RTL Toggle -->
+        <button class="rtl-toggle-btn w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface border border-border flex items-center justify-center text-text-main hover:bg-surface-alt hover:border-primary transition text-xs font-bold shrink-0" aria-label="Toggle Direction">
+          <span class="rtl-btn-text">RTL</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface border border-border flex items-center justify-center text-text-main hover:bg-surface-alt hover:border-primary transition shrink-0" aria-label="Toggle Theme">
+          <i data-lucide="moon" class="theme-icon w-4 h-4"></i>
+        </button>
+
+        <!-- Sign In -->
+        <a href="login.html" class="hidden xl:inline-flex items-center gap-1 font-heading text-xs 2xl:text-sm font-semibold text-text-main hover:text-primary px-2.5 py-1.5 min-h-[40px] transition">
+          <i data-lucide="user" class="w-3.5 h-3.5 text-primary"></i>
+          <span>Sign In</span>
+        </a>
+
+        <!-- Book a Visit -->
+        <a href="../dashboard/book-visit.html" class="btn-playful btn-primary text-xs 2xl:text-sm py-2 px-3.5 sm:py-2.5 sm:px-4 2xl:px-5 hidden sm:inline-flex items-center gap-1.5 h-[42px] 2xl:h-[46px] shrink-0 whitespace-nowrap">
+          <i data-lucide="calendar" class="w-4 h-4"></i>
+          <span>Book a Visit</span>
+        </a>
+
+        <!-- Hamburger Button (Tablet / Mobile) -->
+        <button id="hamburger-btn" class="xl:hidden w-10 h-10 flex items-center justify-center text-text-main rounded-xl border border-border bg-surface hover:bg-surface-alt hover:border-primary transition shrink-0" aria-label="Open Navigation Menu" aria-expanded="false">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="drawer-overlay" class="fixed inset-0 bg-black/50 z-50 hidden opacity-0 transition-opacity duration-300 backdrop-blur-xs"></div>
+  <aside id="mobile-drawer" class="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-surface z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col justify-between p-6 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-5 border-b border-border mb-6">
+        <a href="../index.html" class="flex items-center gap-2">
+          <img src="../assets/images/logo/wonderplay-logo.svg" alt="WonderPlay" class="h-9 w-auto dark:hidden" />
+          <img src="../assets/images/logo/wonderplay-logo-dark.svg" alt="WonderPlay" class="h-9 w-auto hidden dark:block" />
+        </a>
+        <button id="close-drawer-btn" class="w-9 h-9 rounded-full hover:bg-surface-alt flex items-center justify-center text-text-main" aria-label="Close Drawer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-1.5 font-heading text-base sm:text-lg">
+        <!-- Home Accordion -->
+        <div>
+          <button class="mobile-dropdown-toggle w-full flex items-center justify-between py-2 text-text-main hover:text-primary">
+            <span>Home</span>
+            <i data-lucide="chevron-down" class="dropdown-arrow w-5 h-5 transition-transform"></i>
+          </button>
+          <div class="hidden pl-4 flex flex-col gap-1.5 pt-1 pb-2 text-sm font-sans">
+            <a href="../index.html" class="mobile-nav-link py-1.5 text-text-muted hover:text-primary">Home 1 - Play Zone</a>
+            <a href="home2.html" class="mobile-nav-link py-1.5 text-text-muted hover:text-secondary">Home 2 - Adventure Club</a>
+          </div>
+        </div>
+        
+        <a href="about.html" class="mobile-nav-link text-text-main hover:text-primary">About</a>
+        <a href="play-zones.html" class="mobile-nav-link text-text-main hover:text-primary">Play Zones</a>
+        <a href="parties.html" class="mobile-nav-link text-text-main hover:text-primary">Parties</a>
+        <a href="membership.html" class="mobile-nav-link text-text-main hover:text-primary">Membership</a>
+        <a href="safety.html" class="mobile-nav-link text-text-main hover:text-primary">Safety</a>
+        <a href="blog.html" class="mobile-nav-link text-text-main hover:text-primary">Blog</a>
+        <a href="contact.html" class="mobile-nav-link text-text-main hover:text-primary">Contact</a>
+
+        <!-- Dashboard Accordion -->
+        <div class="pt-2 border-t border-border mt-1">
+          <button class="mobile-dropdown-toggle w-full flex items-center justify-between py-2 text-text-main hover:text-primary">
+            <span>Dashboard</span>
+            <i data-lucide="chevron-down" class="dropdown-arrow w-5 h-5 transition-transform"></i>
+          </button>
+          <div class="hidden pl-4 flex flex-col gap-1.5 pt-1 pb-2 text-sm font-sans">
+            <a href="../dashboard/index.html" class="mobile-nav-link py-1.5 text-secondary flex items-center gap-2">
+              <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+              <span>Parent Dashboard</span>
+            </a>
+            <a href="../admin/index.html" class="mobile-nav-link py-1.5 text-text-muted hover:text-primary flex items-center gap-2">
+              <i data-lucide="shield-check" class="w-4 h-4"></i>
+              <span>Admin Dashboard</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="pt-6 border-t border-border flex flex-col gap-3">
+      <a href="login.html" class="btn-playful btn-outline-primary text-center py-2.5">
+        <i data-lucide="user" class="w-4 h-4"></i>
+        <span>Sign In</span>
+      </a>
+      <a href="../dashboard/book-visit.html" class="btn-playful btn-primary text-center py-2.5">
+        <i data-lucide="calendar" class="w-4 h-4"></i>
+        <span>Book a Visit</span>
+      </a>
+    </div>
+  </aside>
+
+  <main class="flex-grow">
+    <!-- SECTION 1: HERO (Full-screen background + floating card + animated bubbles) -->
+    <section class="relative min-h-[85vh] flex items-center py-20 overflow-hidden bg-slate-900 text-white">
+      <div class="absolute inset-0 z-0">
+        <img src="../assets/images/hero/home2-hero.webp" alt="Indoor adventure arena"
+          class="w-full h-full object-cover opacity-65" fetchpriority="high" />
+        <div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-900/70 to-slate-900/50"></div>
+      </div>
+
+      <!-- Floating animated bubbles -->
+      <div class="absolute top-10 left-1/4 w-12 h-12 rounded-full bg-accent/30 backdrop-blur-md animate-bounce"></div>
+      <div class="absolute bottom-20 left-10 w-16 h-16 rounded-full bg-primary/30 backdrop-blur-md animate-pulse"></div>
+      <div
+        class="absolute top-1/3 right-12 w-20 h-20 rounded-full bg-mint/20 backdrop-blur-md animate-bounce delay-300">
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+          <div class="lg:col-span-8 space-y-6">
+            <div class="inline-flex items-center gap-2 hero-badge-entry">
+              <span
+                class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">THE
+                CITY'S FAVORITE FAMILY ADVENTURE</span>
+            </div>
+
+            <h1
+              class="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight font-heading hero-heading-entry">
+              Where Little Feet<br />
+              Find <span class="text-primary underline decoration-accent decoration-4">Big Adventures.</span>
+            </h1>
+
+            <p class="text-lg sm:text-xl text-white/80 max-w-2xl dark:text-white leading-relaxed">
+              Climb higher, explore further, celebrate louder and create memories that last long after playtime ends.
+            </p>
+
+            <div class="flex flex-wrap items-center gap-4 pt-3 hero-cta-entry">
+              <a href="play-zones.html" class="btn-playful btn-primary text-base py-4 px-8 shadow-xl">
+                <i data-lucide="compass" class="w-5 h-5"></i>
+                <span>Explore the Adventure</span>
+              </a>
+              <a href="../dashboard/book-visit.html" class="btn-playful btn-white text-base py-4 px-8 text-text-main">
+                <i data-lucide="calendar" class="w-5 h-5"></i>
+                <span>Book a Visit</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Floating Card on Hero: TODAY AT WONDERPLAY -->
+          <div class="lg:col-span-4 hero-img-entry">
+            <div
+              class="p-6 bg-white/10 backdrop-blur-xl rounded-3xl border border-white/20 shadow-2xl text-white space-y-4 card-playful hero-visual">
+              <div class="flex items-center justify-between pb-3 border-b border-white/15">
+                <span class="text-xs uppercase font-bold tracking-widest text-accent">TODAY AT WONDERPLAY</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-bold text-mint"><span
+                    class="w-2 h-2 rounded-full bg-mint animate-ping"></span> LIVE</span>
+              </div>
+              <div>
+                <div class="text-xs text-white/70">Facility Hours:</div>
+                <div class="text-2xl font-bold font-heading text-white">9:00 AM — 7:30 PM</div>
+              </div>
+              <div class="p-3 bg-white/10 rounded-2xl flex items-center justify-between">
+                <div>
+                  <div class="text-lg font-bold font-heading text-accent">50+ Activities</div>
+                  <div class="text-xs text-white/80">Ready to Explore</div>
+                </div>
+                <i data-lucide="sparkles" class="w-8 h-8 text-accent"></i>
+              </div>
+              <a href="../dashboard/book-visit.html"
+                class="btn-playful btn-accent w-full py-2.5 text-xs text-center text-text-main font-bold block">Reserve
+                Instant Slot &rarr;</a>
+            </div>
+            <!-- Floating Transparent Badge -->
+            <div
+              class="absolute -top-6 -right-6 w-24 h-24 hidden sm:block hero-floating-subject z-20 pointer-events-none drop-shadow-xl">
+              <img src="../assets/images/transparent/birthday.svg" alt="Celebration"
+                class="w-full h-full object-contain animate-float" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: QUICK ADVENTURE SELECTOR (Interactive horizontal strip) -->
+    <section class="py-8 bg-surface border-b border-border shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 sm:grid-cols-5 gap-3">
+          <a href="play-zones.html"
+            class="p-4 bg-surface-alt/60 hover:bg-primary-light hover:border-primary border border-border rounded-2xl text-center transition group card-playful">
+            <div
+              class="w-10 h-10 rounded-xl bg-primary-light text-primary group-hover:bg-primary group-hover:text-white flex items-center justify-center mx-auto mb-2 transition">
+              <i data-lucide="gamepad-2" class="w-5 h-5"></i>
+            </div>
+            <div class="font-heading font-bold text-sm text-text-main group-hover:text-primary">Play</div>
+            <div class="text-[11px] text-text-muted">Soft Mazes &amp; Balls</div>
+          </a>
+
+          <a href="play-zones.html"
+            class="p-4 bg-surface-alt/60 hover:bg-secondary-light hover:border-secondary border border-border rounded-2xl text-center transition group card-playful">
+            <div
+              class="w-10 h-10 rounded-xl bg-secondary-light text-secondary group-hover:bg-secondary group-hover:text-white flex items-center justify-center mx-auto mb-2 transition">
+              <i data-lucide="mountain" class="w-5 h-5"></i>
+            </div>
+            <div class="font-heading font-bold text-sm text-text-main group-hover:text-secondary">Climb</div>
+            <div class="text-[11px] text-text-muted">Ropes &amp; Ninja Walls</div>
+          </a>
+
+          <a href="play-zones.html"
+            class="p-4 bg-surface-alt/60 hover:bg-accent-light hover:border-accent border border-border rounded-2xl text-center transition group card-playful">
+            <div
+              class="w-10 h-10 rounded-xl bg-accent-light dark:bg-accent/20 text-text-main dark:text-white group-hover:bg-accent group-hover:text-white flex items-center justify-center mx-auto mb-2 transition">
+              <i data-lucide="palette" class="w-5 h-5"></i>
+            </div>
+            <div class="font-heading font-bold text-sm text-text-main group-hover:text-text-main">Create</div>
+            <div class="text-[11px] text-text-muted dark:text-white/70">
+              Lego &amp; Sensory Art
+            </div>
+
+            <a href="parties.html"
+              class="p-4 bg-surface-alt/60 hover:bg-primary-light hover:border-primary border border-border rounded-2xl text-center transition group card-playful">
+              <div
+                class="w-10 h-10 rounded-xl bg-primary-light text-primary group-hover:bg-primary group-hover:text-white flex items-center justify-center mx-auto mb-2 transition">
+                <i data-lucide="cake" class="w-5 h-5"></i>
+              </div>
+              <div class="font-heading font-bold text-sm text-text-main group-hover:text-primary">Celebrate</div>
+              <div class="text-[11px] text-text-muted">VIP Birthday Suites</div>
+            </a>
+
+            <a href="about.html"
+              class="p-4 bg-surface-alt/60 hover:bg-mint-light hover:border-mint border border-border rounded-2xl text-center transition group card-playful">
+              <div
+                class="w-10 h-10 rounded-xl bg-mint-light text-mint group-hover:bg-mint group-hover:text-white flex items-center justify-center mx-auto mb-2 transition">
+                <i data-lucide="coffee" class="w-5 h-5"></i>
+              </div>
+              <div class="font-heading font-bold text-sm text-text-main group-hover:text-mint">Relax</div>
+              <div class="text-[11px] text-text-muted">Espresso &amp; Fiber Wi-Fi</div>
+            </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE WONDERPLAY EXPERIENCE (Editorial Split Layout) -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-surface card-asymmetric">
+              <img src="../assets/images/about/mission.webp" alt="Child exploring soft foam tunnel"
+                class="w-full h-auto object-cover" loading="lazy" />
+            </div>
+          </div>
+          <div class="lg:col-span-7 space-y-6">
+            <div class="text-xs uppercase font-bold tracking-widest text-secondary">ONE PLACE. MANY ADVENTURES.</div>
+            <h2 class="text-3xl sm:text-5xl font-bold text-text-main font-heading leading-tight">Every Visit Feels
+              Different.</h2>
+            <p class="text-base text-text-muted leading-relaxed">
+              WonderPlay was engineered to defy boredom. Children have the freedom to transition seamlessly between
+              gross-motor physical challenges, tactile sensory exploration, creative Lego engineering, and high-energy
+              social sports.
+            </p>
+            <div class="grid grid-cols-3 gap-4 pt-2">
+              <div class="p-4 bg-surface rounded-2xl border border-border text-center card-playful">
+                <i data-lucide="compass" class="w-6 h-6 text-primary mx-auto mb-2"></i>
+                <div class="font-heading font-bold text-sm text-text-main">Explore</div>
+                <div class="text-[11px] text-text-muted mt-0.5">3-tier maze tunnels</div>
+              </div>
+              <div class="p-4 bg-surface rounded-2xl border border-border text-center card-playful">
+                <i data-lucide="zap" class="w-6 h-6 text-secondary mx-auto mb-2"></i>
+                <div class="font-heading font-bold text-sm text-text-main">Move</div>
+                <div class="text-[11px] text-text-muted mt-0.5">Warped walls &amp; ropes</div>
+              </div>
+              <div class="p-4 bg-surface rounded-2xl border border-border text-center card-playful">
+                <i data-lucide="sparkles" class="w-6 h-6 text-mint mx-auto mb-2"></i>
+                <div class="font-heading font-bold text-sm text-text-main">Imagine</div>
+                <div class="text-[11px] text-text-muted mt-0.5">Pretend village store</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: AGE-BASED ADVENTURE MAP (4 Large cards) -->
+    <section class="py-20 bg-surface-alt/40 border-y border-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="sticker-tag sticker-primary mb-2">Tailored Spaces</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-text-main font-heading">Find Their Perfect World.</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- 0-2 Toddler Cove -->
+          <div class="p-6 bg-surface rounded-3xl border-2 border-border card-playful flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="sticker-tag sticker-mint text-xs">Ages 0–2</span>
+                <span class="text-xs font-bold text-text-muted">Sensory Soft Zone</span>
+              </div>
+              <h3 class="font-heading font-bold text-2xl text-text-main">Toddler Cove</h3>
+              <p class="text-xs text-text-muted leading-relaxed">Soft animal crawl wedges, tactile baby stimulation
+                wall, gentle bubble pit, and parent breastfeeding seats.</p>
+              <div class="rounded-2xl overflow-hidden my-4 bg-mint-light">
+                <img src="../assets/images/play-zones/toddler-cove.webp" alt="Toddler Cove"
+                  class="w-full h-44 object-cover" loading="lazy" />
+              </div>
+            </div>
+            <a href="play-zones.html"
+              class="btn-playful btn-outline-primary mt-6 text-xs py-2.5 w-full text-center">Explore
+              Toddler Cove &rarr;</a>
+          </div>
+
+          <!-- 3-5 Wonderland -->
+          <div class="p-6 bg-surface rounded-3xl border-2 border-border card-playful flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="sticker-tag sticker-secondary text-xs">Ages 3–5</span>
+                <span class="text-xs font-bold text-text-muted">Castle Soft Mazes</span>
+              </div>
+              <h3 class="font-heading font-bold text-2xl text-text-main">Wonderland</h3>
+              <p class="text-xs text-text-muted leading-relaxed">Multi-tier foam castle labyrinth, spiral tube slides,
+                rainbow balance bridges, donut swings, and giant foam building blocks.</p>
+              <div class="rounded-2xl overflow-hidden my-4 bg-secondary-light">
+                <img src="../assets/images/play-zones/wonderland.webp" alt="Wonderland Soft Play"
+                  class="w-full h-44 object-cover" loading="lazy" />
+              </div>
+            </div>
+            <a href="play-zones.html" class="btn-playful btn-secondary mt-6 text-xs py-2.5 w-full text-center">Explore
+              Wonderland &rarr;</a>
+          </div>
+
+          <!-- 6-8 Adventure Arena -->
+          <div class="p-6 bg-surface rounded-3xl border-2 border-border card-playful flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="sticker-tag sticker-primary text-xs">Ages 6–8</span>
+                <span class="text-xs font-bold text-text-muted">3-Story Complex</span>
+              </div>
+              <h3 class="font-heading font-bold text-2xl text-text-main">Adventure Arena</h3>
+              <p class="text-xs text-text-muted leading-relaxed">Suspended rope bridges, pneumatic ball blasters,
+                quadruple wave racing slides, and high-altitude climbing webs.</p>
+              <div class="rounded-2xl overflow-hidden my-4 bg-primary-light">
+                <img src="../assets/images/play-zones/adventure-arena.webp" alt="Adventure Arena"
+                  class="w-full h-44 object-cover" loading="lazy" />
+              </div>
+            </div>
+            <a href="play-zones.html" class="btn-playful mt-6 btn-primary  text-xs py-2.5 w-full text-center">Explore
+              Adventure Arena &rarr;</a>
+          </div>
+
+          <!-- 9-12 Ninja Zone -->
+          <div class="p-6 bg-surface rounded-3xl border-2 border-border card-playful flex flex-col justify-between">
+            <div class="space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="sticker-tag sticker-accent text-xs">Ages 9–12</span>
+                <span class="text-xs font-bold text-text-muted">Timed Agility Arena</span>
+              </div>
+              <h3 class="font-heading font-bold text-2xl text-text-main">Ninja Zone</h3>
+              <p class="text-xs text-text-muted leading-relaxed">Dual warped walls, swinging rings, tilting logs,
+                laser-timed buzzers, and spiderclimb towers,Dual warped walls.</p>
+              <div class="rounded-2xl overflow-hidden my-4 bg-accent-light">
+                <img src="../assets/images/play-zones/ninja-zone.webp" alt="Ninja Zone" class="w-full h-44 object-cover"
+                  loading="lazy" />
+              </div>
+            </div>
+            <a href="play-zones.html"
+              class="btn-playful btn-accent mt-6 text-xs py-2.5 w-full text-center text-text-main">Explore Ninja Zone
+              &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: PLAY ALL DAY (Deep plum / dark colorful section with 100% FUN ring) -->
+    <section class="py-20 bg-slate-900 text-white relative overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="../assets/images/play-zones/climbing-wall.webp" alt="Arena"
+          class="w-full h-full object-cover opacity-20 filter blur-[2px]" />
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-8 space-y-6">
+            <span class="sticker-tag sticker-secondary">Non-Stop Energy</span>
+            <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white">Play All Day. Sleep All Night.</h2>
+            <p class="text-white/80 leading-relaxed max-w-xl">
+              Our indoor climate-controlled wonderland keeps kids moving rain or shine. 25,000 square feet of boundless
+              excitement with certified ASTM shock-padding.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4">
+              <div class="p-4 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/10 text-center">
+                <div class="font-heading font-bold text-3xl text-accent">2+ Hrs</div>
+                <div class="text-xs text-white/70 mt-1">Adventure Time</div>
+              </div>
+              <div class="p-4 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/10 text-center">
+                <div class="font-heading font-bold text-3xl text-mint">50+</div>
+                <div class="text-xs text-white/70 mt-1">Activities</div>
+              </div>
+              <div class="p-4 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/10 text-center">
+                <div class="font-heading font-bold text-3xl text-secondary">15+</div>
+                <div class="text-xs text-white/70 mt-1">Play Challenges</div>
+              </div>
+              <div class="p-4 bg-white/10 rounded-2xl backdrop-blur-sm border border-white/10 text-center">
+                <div class="font-heading font-bold text-3xl text-white">7 Days</div>
+                <div class="text-xs text-white/70 mt-1">Open Every Week</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 100% FUN Circular Ring -->
+          <div class="lg:col-span-4 flex justify-center">
+            <div
+              class="relative w-56 h-56 rounded-full border-8 border-accent/40 flex items-center justify-center bg-white/5 backdrop-blur-md animate-pulse">
+              <div class="text-center">
+                <div class="font-heading font-bold text-4xl text-accent">100%</div>
+                <div class="font-heading font-bold text-xl text-white tracking-wider">FUN</div>
+                <div class="text-[11px] text-white/70 mt-1">GUARANTEED</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: THE ADVENTURE WALL (Masonry Gallery) -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="sticker-tag sticker-mint mb-2">Visual Odyssey</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-text-main font-heading">The Adventure Wall</h2>
+          <p class="text-text-muted mt-2">Catch a glimpse of climbing walls, giant ball oceans, parent coffee breaks,
+            and party celebrations.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 gallery-adventure-grid">
+          <div class="rounded-3xl overflow-hidden shadow-md border-2 border-border row-span-2 card-playful">
+            <img src="../assets/images/gallery/gallery-5.webp" alt="Climbing peak"
+              class="w-full h-full object-cover hover:scale-105 transition duration-500 min-h-[300px]" loading="lazy" />
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-md border-2 border-border card-playful">
+            <img src="../assets/images/gallery/gallery-6.webp" alt="Party cake slice"
+              class="w-full h-44 object-cover hover:scale-105 transition duration-500" loading="lazy" />
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-md border-2 border-border card-playful">
+            <img src="../assets/images/gallery/gallery-7.webp" alt="Ball pit slide"
+              class="w-full h-44 object-cover hover:scale-105 transition duration-500" loading="lazy" />
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-md border-2 border-border row-span-2 card-playful">
+            <img src="../assets/images/play-zones/toddler-cove.webp" alt="Safety staff member"
+              class="w-full h-full object-cover hover:scale-105 transition duration-500 min-h-[300px]" loading="lazy" />
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-md border-2 border-border card-playful">
+            <img src="../assets/images/about/mission.webp" alt="Parent cafe lounge"
+              class="w-full h-44 object-cover hover:scale-105 transition duration-500" loading="lazy" />
+          </div>
+          <div class="rounded-3xl overflow-hidden shadow-md border-2 border-border card-playful">
+            <img src="../assets/images/parties/kids-celebration.webp" alt="Party decorations"
+              class="w-full h-44 object-cover hover:scale-105 transition duration-500" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: BIRTHDAY EXPERIENCE (Split layout) -->
+    <section class="py-20 bg-surface-alt/40 border-y border-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 space-y-6">
+            <div class="text-xs uppercase font-bold tracking-widest text-secondary">MAKE THEIR DAY A WONDER DAY.</div>
+            <h2 class="text-3xl sm:text-5xl font-bold text-text-main font-heading leading-tight">All-Inclusive Birthday
+              Parties.</h2>
+            <p class="text-text-muted leading-relaxed">
+              We handle everything from custom theme setup to cake serving and final cleanup. Sit back and watch your
+              child celebrate their biggest milestone with all their best friends.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+              <div class="p-3 bg-surface rounded-2xl border border-border text-center">
+                <div class="font-heading font-bold text-xs text-text-main">Private Party Room</div>
+              </div>
+              <div class="p-3 bg-surface rounded-2xl border border-border text-center">
+                <div class="font-heading font-bold text-xs text-text-main">Dedicated Host</div>
+              </div>
+              <div class="p-3 bg-surface rounded-2xl border border-border text-center">
+                <div class="font-heading font-bold text-xs text-text-main">Play Access</div>
+              </div>
+              <div class="p-3 bg-surface rounded-2xl border border-border text-center">
+                <div class="font-heading font-bold text-xs text-text-main">Food &amp; Drinks</div>
+              </div>
+              <div class="p-3 bg-surface rounded-2xl border border-border text-center">
+                <div class="font-heading font-bold text-xs text-text-main">Theme Decoration</div>
+              </div>
+              <div class="p-3 bg-surface rounded-2xl border border-border text-center">
+                <div class="font-heading font-bold text-xs text-text-main">Grip Socks Included</div>
+              </div>
+            </div>
+            <div class="pt-2">
+              <a href="parties.html" class="btn-playful btn-secondary py-3 px-8 text-sm">Explore Birthday Parties</a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <img src="../assets/images/hero/home2-hero.webp" alt="Birthday Party room"
+              class="w-full h-auto rounded-3xl shadow-xl border-4 border-surface object-cover" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: MEMBERSHIP -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="sticker-tag sticker-primary mb-2">WonderPlay Club</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-text-main font-heading">More Visits. More Memories.</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 bg-surface rounded-3xl border-2 border-border card-playful flex flex-col justify-between">
+            <div>
+              <span class="sticker-tag sticker-mint text-xs mb-3">Explorer</span>
+              <div class="font-heading font-bold text-4xl text-text-main my-2">$49 <span
+                  class="text-xs font-normal text-text-muted">/ month</span></div>
+              <ul class="space-y-2.5 text-xs text-text-muted my-6">
+                <li>&bull; 4 Visits per month</li>
+                <li>&bull; 1 Accompanying adult free</li>
+                <li>&bull; 10% Cafe discount</li>
+                <li>&bull; Member events invite</li>
+              </ul>
+            </div>
+            <a href="membership.html" class="btn-playful btn-outline-primary w-full py-2.5 text-xs">View Membership
+              Plans</a>
+          </div>
+
+          <div
+            class="p-6 bg-surface rounded-3xl border-2 border-secondary shadow-xl card-playful relative flex flex-col justify-between">
+            <div
+              class="absolute -top-3 right-6 bg-secondary text-white text-xs font-bold py-1 px-3 rounded-full uppercase">
+              MOST POPULAR</div>
+            <div>
+              <span class="sticker-tag sticker-secondary text-xs mb-3">Family</span>
+              <div class="font-heading font-bold text-4xl text-secondary my-2">$79 <span
+                  class="text-xs font-normal text-text-muted">/ month</span></div>
+              <ul class="space-y-2.5 text-xs text-text-muted my-6">
+                <li>&bull; 12 Visits per month</li>
+                <li>&bull; 2 Free Guest passes / mo</li>
+                <li>&bull; 15% Party discount</li>
+                <li>&bull; Exclusive weekend early entry</li>
+              </ul>
+            </div>
+            <a href="membership.html" class="btn-playful btn-secondary w-full py-2.5 text-xs">View Membership Plans</a>
+          </div>
+
+          <div class="p-6 bg-surface rounded-3xl border-2 border-border card-playful flex flex-col justify-between">
+            <div>
+              <span class="sticker-tag sticker-primary text-xs mb-3">Adventure+</span>
+              <div class="font-heading font-bold text-4xl text-primary my-2">$119 <span
+                  class="text-xs font-normal text-text-muted">/ month</span></div>
+              <ul class="space-y-2.5 text-xs text-text-muted my-6">
+                <li>&bull; Unlimited visits (All zones)</li>
+                <li>&bull; 4 Guest passes / month</li>
+                <li>&bull; 25% Birthday party discount</li>
+                <li>&bull; Free VIP Glow Party entry</li>
+              </ul>
+            </div>
+            <a href="membership.html" class="btn-playful btn-primary w-full py-2.5 text-xs">View Membership Plans</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: SAFETY PROMISE -->
+    <section class="py-16 bg-surface-alt/40 border-y border-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-5 relative max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none mx-auto w-full">
+            <img src="../assets/images/safety/active-supervision.webp" alt="Safety staff supervising children"
+              class="w-full h-auto rounded-3xl shadow-xl border-4 border-surface object-cover" loading="lazy" />
+            <div
+              class="absolute -bottom-4 right-4 bg-mint text-text-main font-heading font-bold text-xs py-1.5 px-4 rounded-full shadow-lg">
+              Parent Approved &#x2714;</div>
+          </div>
+          <div class="lg:col-span-7 space-y-6">
+            <span class="sticker-tag sticker-mint">Peace of Mind</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-text-main font-heading">Adventure Starts With Safety.</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+              <div class="p-4 bg-surface rounded-2xl border border-border">
+                <div class="font-heading font-bold text-sm text-text-main">Trained Staff</div>
+                <div class="text-[11px] text-text-muted mt-1">CPR &amp; First Aid certified</div>
+              </div>
+              <div class="p-4 bg-surface rounded-2xl border border-border">
+                <div class="font-heading font-bold text-sm text-text-main">Daily Equipment Checks</div>
+                <div class="text-[11px] text-text-muted mt-1">10-point structural safety</div>
+              </div>
+              <div class="p-4 bg-surface rounded-2xl border border-border">
+                <div class="font-heading font-bold text-sm text-text-main">Secure Entry</div>
+                <div class="text-[11px] text-text-muted mt-1">RFID parent matched exit</div>
+              </div>
+              <div class="p-4 bg-surface rounded-2xl border border-border">
+                <div class="font-heading font-bold text-sm text-text-main">Age-Based Zones</div>
+                <div class="text-[11px] text-text-muted mt-1">Separated toddlers &amp; ninjas</div>
+              </div>
+              <div class="p-4 bg-surface rounded-2xl border border-border">
+                <div class="font-heading font-bold text-sm text-text-main">First Aid Ready</div>
+                <div class="text-[11px] text-text-muted mt-1">On-site medical suite</div>
+              </div>
+              <div class="p-4 bg-surface rounded-2xl border border-border">
+                <div class="font-heading font-bold text-sm text-text-main">Clean Play Areas</div>
+                <div class="text-[11px] text-text-muted mt-1">UV-C sanitization daily</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 10: PARENT STORIES (5 Testimonials) -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="sticker-tag sticker-secondary mb-2">Real Stories</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-text-main font-heading">Parent Stories &amp; Memories</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-surface rounded-3xl border-2 border-border card-playful">
+            <div class="flex items-center gap-1 text-accent mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+            </div>
+            <p class="text-xs text-text-muted leading-relaxed italic">"WonderPlay has become our Saturday tradition. My
+              daughter knows exactly which zone she wants to visit every time."</p>
+            <div class="flex items-center gap-3 mt-4 pt-3 border-t border-border">
+              <img src="../assets/images/testimonials/parent-1.webp" alt="Rachel G." class="w-10 h-10 rounded-full" />
+              <div>
+                <div class="font-heading font-bold text-xs text-text-main">Rachel Green</div>
+                <div class="text-[11px] text-text-muted">Mom of Chloe (4 yrs)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-surface rounded-3xl border-2 border-border card-playful">
+            <div class="flex items-center gap-1 text-accent mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+            </div>
+            <p class="text-xs text-text-muted leading-relaxed italic">"The ninja course is unmatched! My 9-year-old twin
+              boys buzzer course compete on the timer buzzer course every Sunday morning."</p>
+            <div class="flex items-center gap-3 mt-4 pt-3 border-t border-border">
+              <img src="../assets/images/testimonials/parent-2.webp" alt="Mark D." class="w-10 h-10 rounded-full" />
+              <div>
+                <div class="font-heading font-bold text-xs text-text-main">Mark Davis</div>
+                <div class="text-[11px] text-text-muted">Dad of Leo &amp; Max (9 yrs)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 bg-surface rounded-3xl border-2 border-border card-playful">
+            <div class="flex items-center gap-1 text-accent mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-accent text-accent"></i>
+            </div>
+            <p class="text-xs text-text-muted leading-relaxed italic">"We booked the Superhero VIP birthday package. 15
+              kids had the absolute time of their lives, and we had zero mess at home!"</p>
+            <div class="flex items-center gap-3 mt-4 pt-3 border-t border-border">
+              <img src="../assets/images/testimonials/parent-3.webp" alt="Sophie L." class="w-10 h-10 rounded-full" />
+              <div>
+                <div class="font-heading font-bold text-xs text-text-main">Sophie Laurent</div>
+                <div class="text-[11px] text-text-muted">Mom of Noah (6 yrs)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11: WEEKEND AT WONDERPLAY (6 Event Cards) -->
+    <section class="py-16 bg-surface-alt/30 border-y border-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="sticker-tag sticker-primary mb-2">Weekend Adventures</span>
+          <h2 class="text-3xl font-bold text-text-main font-heading">Weekend at WonderPlay</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="p-5 bg-surface rounded-3xl border border-border card-playful flex flex-col justify-between">
+            <div>
+              <div class="font-bold text-xs text-secondary mb-1">Saturday &bull; 10:00 AM</div>
+              <h4 class="font-heading font-bold text-base text-text-main">Saturday Adventure Club</h4>
+              <div class="text-[11px] text-text-muted mt-1">Ages 6–12 &bull; Obstacle challenge &amp; coach guidance.
+              </div>
+            </div>
+            <a href="../dashboard/book-visit.html"
+              class="btn-playful btn-outline-primary text-xs py-2 mt-4 text-center">Book Club &rarr;</a>
+          </div>
+
+          <div class="p-5 bg-surface rounded-3xl border border-border card-playful flex flex-col justify-between">
+            <div>
+              <div class="font-bold text-xs text-mint mb-1">Sunday &bull; 9:30 AM</div>
+              <h4 class="font-heading font-bold text-base text-text-main">Sunday Family Morning</h4>
+              <div class="text-[11px] text-text-muted mt-1">All Ages &bull; Free adult coffee + light morning music.
+              </div>
+            </div>
+            <a href="../dashboard/book-visit.html" class="btn-playful btn-secondary text-xs py-2 mt-4 text-center">Book
+              Morning &rarr;</a>
+          </div>
+
+          <div class="p-5 bg-surface rounded-3xl border border-border card-playful flex flex-col justify-between">
+            <div>
+              <div class="font-bold text-xs text-primary mb-1">Saturday &bull; 11:30 AM</div>
+              <h4 class="font-heading font-bold text-base text-text-main">Toddler Discovery Hour</h4>
+              <div class="text-[11px] text-text-muted mt-1">Ages 0–2 &bull; Bubble show &amp; soft sensory games.</div>
+            </div>
+            <a href="../dashboard/book-visit.html" class="btn-playful btn-primary text-xs py-2 mt-4 text-center">Book
+              Discovery &rarr;</a>
+          </div>
+
+          <div class="p-5 bg-surface rounded-3xl border border-border card-playful flex flex-col justify-between">
+            <div>
+              <div class="font-bold text-xs text-accent mb-1">Saturday &bull; 3:00 PM</div>
+              <h4 class="font-heading font-bold text-base text-text-main">Mini Ninja Challenge</h4>
+              <div class="text-[11px] text-text-muted mt-1">Ages 6–10 &bull; Timed arena rounds &amp; medals.</div>
+            </div>
+            <a href="../dashboard/book-visit.html"
+              class="btn-playful btn-accent text-xs py-2 mt-4 text-center text-text-main">Book Ninja &rarr;</a>
+          </div>
+
+          <div class="p-5 bg-surface rounded-3xl border border-border card-playful flex flex-col justify-between">
+            <div>
+              <div class="font-bold text-xs text-primary mb-1">Sunday &bull; 2:00 PM</div>
+              <h4 class="font-heading font-bold text-base text-text-main">Creative Kids Workshop</h4>
+              <div class="text-[11px] text-text-muted mt-1">Ages 4–8 &bull; Giant Lego engineering &amp; craft art.
+              </div>
+            </div>
+            <a href="../dashboard/book-visit.html"
+              class="btn-playful btn-outline-primary text-xs py-2 mt-4 text-center">Book Workshop &rarr;</a>
+          </div>
+
+          <div class="p-5 bg-surface rounded-3xl border border-border card-playful flex flex-col justify-between">
+            <div>
+              <div class="font-bold text-xs text-primary mb-1">Sunday &bull; 4:30 PM</div>
+              <h4 class="font-heading font-bold text-base text-text-main">Parent &amp; Me Play</h4>
+              <div class="text-[11px] text-text-muted mt-1">Ages 1–4 &bull; Guided interactive parent-child agility.
+              </div>
+            </div>
+            <a href="../dashboard/book-visit.html" class="btn-playful btn-secondary text-xs py-2 mt-4 text-center">Book
+              Session &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 12: PARENT GUIDE (3 Large Editorial Cards) -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span class="sticker-tag sticker-secondary mb-2">First Time Visiting?</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-text-main font-heading">Parent Play Guide</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-6 bg-surface rounded-3xl border-2 border-border card-playful space-y-4">
+            <img src="../assets/images/membership/family-membership.webp" alt="Check-in desk"
+              class="w-full h-44 object-cover rounded-2xl" loading="lazy" />
+            <h3 class="font-heading font-bold text-xl text-text-main">Before You Visit</h3>
+            <p class="text-xs text-text-muted leading-relaxed">Sign your electronic safety waiver online to skip the
+              front desk queue and enter immediately on arrival.</p>
+          </div>
+
+          <div class="p-6 bg-surface rounded-3xl border-2 border-border card-playful space-y-4">
+            <img src="../assets/images/safety/active-supervision.webp" alt="Child wearing grip socks"
+              class="w-full h-44 object-cover rounded-2xl" loading="lazy" />
+            <h3 class="font-heading font-bold text-xl text-text-main">What to Bring</h3>
+            <p class="text-xs text-text-muted leading-relaxed">Rubber grip socks for all children and adults. Reusable
+              water bottles (refill stations available throughout).</p>
+          </div>
+
+          <div class="p-6 bg-surface rounded-3xl border-2 border-border card-playful space-y-4">
+            <img src="../assets/images/play-zones/sensory-zone.webp" alt="Child playing in wonderland"
+              class="w-full h-44 object-cover rounded-2xl" loading="lazy" />
+            <h3 class="font-heading font-bold text-xl text-text-main">Make The Most of It</h3>
+            <p class="text-xs text-text-muted leading-relaxed">Start in the low-sensory zones before heading to the
+              high-energy Ninja and Adventure Arena ropes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 13: BLOG / FAMILY JOURNAL (4 latest articles) -->
+    <section class="py-16 bg-surface-alt/30 border-y border-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10">
+          <div>
+            <span class="sticker-tag sticker-primary mb-2">Family Journal</span>
+            <h2 class="text-3xl font-bold text-text-main font-heading">Latest Articles &amp; Insights</h2>
+          </div>
+          <a href="blog.html" class="btn-playful btn-outline-primary text-xs py-2.5 px-5">View All Articles &rarr;</a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="p-4 bg-surface rounded-3xl border border-border card-playful flex flex-col justify-between">
+            <div>
+              <img src="../assets/images/blog/blog-indoor-play.webp" alt="Sensory"
+                class="w-full h-36 object-cover rounded-2xl mb-3" loading="lazy" />
+              <span class="text-[11px] font-bold text-primary">Indoor Fun</span>
+              <h4 class="font-heading font-bold text-sm text-text-main mt-1">10 Indoor Activities for Rainy Days</h4>
+              <div class="text-[11px] text-text-muted mt-1">Oct 12, 2026</div>
+            </div>
+            <a href="blog-details.html" class="mt-3 pt-2 border-t border-border text-xs font-bold text-primary">Read
+              More &rarr;</a>
+          </div>
+
+          <div class="p-4 bg-surface rounded-3xl border border-border card-playful flex flex-col justify-between">
+            <div>
+              <img src="../assets/images/blog/blog-birthday-guide.webp" alt="Birthday"
+                class="w-full h-36 object-cover rounded-2xl mb-3" loading="lazy" />
+              <span class="text-[11px] font-bold text-secondary">Birthday Planning</span>
+              <h4 class="font-heading font-bold text-sm text-text-main mt-1">How to Plan a Stress-Free Birthday</h4>
+              <div class="text-[11px] text-text-muted mt-1">Oct 08, 2026</div>
+            </div>
+            <a href="blog-details.html" class="mt-3 pt-2 border-t border-border text-xs font-bold text-secondary">Read
+              More &rarr;</a>
+          </div>
+
+          <div class="p-4 bg-surface rounded-3xl border border-border card-playful flex flex-col justify-between">
+            <div>
+              <img src="../assets/images/blog/blog-safety-guide.webp" alt="Active play"
+                class="w-full h-36 object-cover rounded-2xl mb-3" loading="lazy" />
+              <span class="text-[11px] font-bold text-mint">Development</span>
+              <h4 class="font-heading font-bold text-sm text-text-main mt-1">Why Active Play Matters for Kids</h4>
+              <div class="text-[11px] text-text-muted mt-1">Oct 02, 2026</div>
+            </div>
+            <a href="blog-details.html" class="mt-3 pt-2 border-t border-border text-xs font-bold text-mint">Read More
+              &rarr;</a>
+          </div>
+
+          <div class="p-4 bg-surface rounded-3xl border border-border card-playful flex flex-col justify-between">
+            <div>
+              <img src="../assets/images/blog/blog-active-play.webp" alt="Screen-free weekend"
+                class="w-full h-36 object-cover rounded-2xl mb-3" loading="lazy" />
+              <span class="text-[11px] font-bold text-accent">Parenting</span>
+              <h4 class="font-heading font-bold text-sm text-text-main mt-1">Screen-Free Family Weekend Ideas</h4>
+              <div class="text-[11px] text-text-muted mt-1">Sep 28, 2026</div>
+            </div>
+            <a href="blog-details.html" class="mt-3 pt-2 border-t border-border text-xs font-bold text-text-main">Read
+              More &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 14: INSTAGRAM-STYLE GALLERY (No Lucide Instagram, uses pure SVG) -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="sticker-tag sticker-secondary mb-2">Social Feed</span>
+        <h2 class="text-3xl font-bold text-text-main font-heading mb-4">Follow the Adventure</h2>
+        <p class="text-xs text-text-muted max-w-md mx-auto mb-8">Tag <strong
+            class="text-text-main">#WonderPlayAdventures</strong> on Instagram for a chance to be featured on our big
+          board!</p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-3 mb-8">
+          <div class="rounded-2xl overflow-hidden aspect-square border border-border card-playful">
+            <img src="../assets/images/gallery/gallery-5.webp" alt="Adventure snap 1"
+              class="w-full h-full object-cover hover:scale-110 transition duration-300" loading="lazy" />
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-square border border-border card-playful">
+            <img src="../assets/images/gallery/gallery-6.webp" alt="Adventure snap 2"
+              class="w-full h-full object-cover hover:scale-110 transition duration-300" loading="lazy" />
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-square border border-border card-playful">
+            <img src="../assets/images/gallery/gallery-7.webp" alt="Adventure snap 3"
+              class="w-full h-full object-cover hover:scale-110 transition duration-300" loading="lazy" />
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-square border border-border card-playful">
+            <img src="../assets/images/gallery/gallery-8.webp" alt="Adventure snap 4"
+              class="w-full h-full object-cover hover:scale-110 transition duration-300" loading="lazy" />
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-square border border-border card-playful">
+            <img src="../assets/images/gallery/gallery-2.webp" alt="Adventure snap 5"
+              class="w-full h-full object-cover hover:scale-110 transition duration-300" loading="lazy" />
+          </div>
+          <div class="rounded-2xl overflow-hidden aspect-square border border-border card-playful">
+            <img src="../assets/images/parties/kids-celebration.webp" alt="Adventure snap 6"
+              class="w-full h-full object-cover hover:scale-110 transition duration-300" loading="lazy" />
+          </div>
+        </div>
+
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+          class="btn-playful btn-outline-primary py-3 px-8 text-sm inline-flex items-center gap-2">
+          <span class="w-4 h-4 text-primary"><svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.13-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg></span>
+          <span>Follow WonderPlay</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 15: NEWSLETTER -->
+    <section class="py-16 bg-surface-alt/40 border-y border-border">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="sticker-tag sticker-mint mb-2">WonderClub</span>
+        <h2 class="text-3xl font-bold text-text-main font-heading mb-3">Bring More Wonder Into Your Week.</h2>
+        <p class="text-sm text-text-muted max-w-lg mx-auto mb-6">Get new activities, events, birthday ideas and family
+          fun delivered to your inbox.</p>
+        <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+          onsubmit="event.preventDefault(); alert('Joined WonderList!');">
+          <input type="email" placeholder="Your email address" class="form-input-playful text-sm flex-1" required />
+          <button type="submit" class="btn-playful btn-secondary py-3 px-6 text-sm shrink-0">
+            <span>Join the WonderList</span>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- SECTION 16: FINAL CTA (Immersive image background) -->
+    <section class="py-24 bg-slate-900 text-white relative overflow-hidden text-center">
+      <div class="absolute inset-0 z-0">
+        <img src="../assets/images/gallery/gallery-2.webp" alt="Background"
+          class="w-full h-full object-cover opacity-25 filter blur-[2px]" />
+      </div>
+
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
+        <h2 class="text-4xl sm:text-6xl font-bold font-heading text-white">Your Next Adventure Starts Here.</h2>
+        <p class="text-white/80 text-base max-w-xl mx-auto leading-relaxed">
+          Join hundreds of happy families this weekend. Select your time slot and get ready for an unforgettable day!
+        </p>
+        <div class="flex flex-wrap justify-center gap-4 pt-3">
+          <a href="../dashboard/book-visit.html" class="btn-playful btn-secondary text-base py-4 px-8">
+            <i data-lucide="calendar" class="w-5 h-5"></i>
+            <span>Book a Visit</span>
+          </a>
+          <a href="play-zones.html" class="btn-playful btn-white text-base py-4 px-8 text-text-main">
+            <span>Explore Play Zones</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="bg-surface border-t-2 border-border pt-16 pb-10 relative overflow-hidden mt-auto">
+    <div class="blob-shape w-96 h-96 bg-primary-light -top-20 -left-20 rounded-full"></div>
+    <div class="blob-shape w-96 h-96 bg-secondary-light -bottom-20 -right-20 rounded-full"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 pb-12 border-b border-border">
+
+        <div class="lg:col-span-2 space-y-4">
+          <a href="../index.html" class="inline-block">
+            <img src="../assets/images/logo/wonderplay-logo.svg" alt="WonderPlay Logo"
+              class="h-11 w-auto dark:hidden" />
+            <img src="../assets/images/logo/wonderplay-logo-dark.svg" alt="WonderPlay Logo"
+              class="h-11 w-auto hidden dark:block" />
+          </a>
+          <p class="text-text-muted text-sm max-w-sm leading-relaxed">
+            WonderPlay is the city's premier indoor playground and family entertainment adventure park. Certified soft
+            foam safety, UV-C ball sanitization, and magical birthday parties.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#"
+              class="w-9 h-9 rounded-full bg-primary-light text-primary flex items-center justify-center hover:bg-primary hover:text-white transition"
+              aria-label="Facebook">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-full bg-secondary-light text-secondary flex items-center justify-center hover:bg-secondary hover:text-white transition"
+              aria-label="Instagram">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.13-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-full bg-mint-light text-mint flex items-center justify-center hover:bg-mint hover:text-white transition"
+              aria-label="YouTube">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-9 h-9 rounded-full bg-accent-light text-text-main flex items-center justify-center hover:bg-accent transition"
+              aria-label="Twitter">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-heading text-base font-bold text-text-main mb-4">Play Zones</h4>
+          <ul class="space-y-2.5 text-xs text-text-muted">
+            <li><a href="play-zones.html" class="footer-link-item hover:text-primary transition">Toddler Cove (0-2y)</a>
+            </li>
+            <li><a href="play-zones.html" class="footer-link-item hover:text-primary transition">Soft Play
+                Wonderland</a></li>
+            <li><a href="play-zones.html" class="footer-link-item hover:text-primary transition">Adventure Arena</a>
+            </li>
+            <li><a href="play-zones.html" class="footer-link-item hover:text-primary transition">Ninja Zone Course</a>
+            </li>
+            <li><a href="play-zones.html" class="footer-link-item hover:text-primary transition">Creative Corner Lab</a>
+            </li>
+            <li><a href="play-zones.html" class="footer-link-item hover:text-primary transition">Sensory Calm Cove</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading text-base font-bold text-text-main mb-4">Parties &amp; Passes</h4>
+          <ul class="space-y-2.5 text-xs text-text-muted">
+            <li><a href="parties.html" class="footer-link-item hover:text-primary transition">Birthday Packages</a></li>
+            <li><a href="parties.html" class="footer-link-item hover:text-primary transition">Party Themes &amp;
+                Rooms</a></li>
+            <li><a href="membership.html" class="footer-link-item hover:text-primary transition">Monthly Memberships</a>
+            </li>
+            <li><a href="pricing.html" class="footer-link-item hover:text-primary transition">Day Passes &amp; Rates</a>
+            </li>
+            <li><a href="../dashboard/book-visit.html" class="footer-link-item hover:text-primary transition">Book
+                Session</a></li>
+            <li><a href="safety.html" class="footer-link-item hover:text-primary transition">Safety Protocols</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading text-base font-bold text-text-main mb-4">Family Resources</h4>
+          <ul class="space-y-2.5 text-xs text-text-muted">
+            <li><a href="about.html" class="footer-link-item hover:text-primary transition">About Our Story</a></li>
+            <li><a href="blog.html" class="footer-link-item hover:text-primary transition">Parenting Blog &amp; Tips</a>
+            </li>
+            <li><a href="contact.html" class="footer-link-item hover:text-primary transition">Contact &amp;
+                Directions</a></li>
+            <li><a href="safety.html" class="footer-link-item hover:text-primary transition">Daily Safety Checklist</a>
+            </li>
+            <li><a href="../dashboard/index.html" class="footer-link-item hover:text-primary transition">Parent App
+                Portal</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-heading text-base font-bold text-text-main mb-4">Opening Hours</h4>
+          <ul class="space-y-1.5 text-xs text-text-muted">
+            <li class="flex justify-between"><span>Mon – Thu:</span> <span class="font-bold text-text-main">9:00 AM –
+                7:30 PM</span></li>
+            <li class="flex justify-between"><span>Fri – Sat:</span> <span class="font-bold text-text-main">9:00 AM –
+                9:00 PM</span></li>
+            <li class="flex justify-between"><span>Sunday:</span> <span class="font-bold text-text-main">9:30 AM – 8:00
+                PM</span></li>
+          </ul>
+          <div class="mt-4 pt-3 border-t border-border">
+            <div class="text-[11px] font-bold text-text-main">Direct Front Desk:</div>
+            <div class="text-xs font-bold text-primary font-heading">+1 (800) 966-3377</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-text-muted">
+        <div>&copy; 2026 WonderPlay Play Zone Inc. All Rights Reserved. Built for family entertainment.</div>
+        <div class="flex items-center gap-5">
+          <a href="safety.html" class="footer-link-item hover:text-primary transition">Safety Rules</a>
+          <a href="about.html" class="footer-link-item hover:text-primary transition">Privacy Policy</a>
+          <a href="contact.html" class="footer-link-item hover:text-primary transition">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/validation.js"></script>
+  <script src="../assets/js/booking.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/admin.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/wonderplay-animations.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parent Profile Details | WonderPlay Admin Management</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FF7043',
+            'primary-hover': '#E65A2E',
+            'primary-light': '#FFF0EB',
+            'primary-dark': '#D9482B',
+            secondary: '#5B3FD3',
+            'secondary-hover': '#4B32B6',
+            'secondary-light': '#F3F0FF',
+            accent: '#FFB74D',
+            'accent-hover': '#FFA726',
+            'accent-light': '#FFF8E7',
+            mint: '#52D6B5',
+            'mint-hover': '#3DC2A0',
+            'mint-light': '#E8F9F5',
+            coral: '#FF7043',
+            'coral-light': '#FFF0EB',
+            background: 'var(--background)',
+            surface: 'var(--surface)',
+            'surface-alt': 'var(--surface-alt)',
+            'surface-card': 'var(--surface-card)',
+            border: 'var(--border)',
+            'text-main': 'var(--text-main)',
+            'text-muted': 'var(--text-muted)',
+            'text-light': 'var(--text-light)',
+          },
+          fontFamily: {
+            heading: ['Fredoka', 'cursive', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-background text-text-main min-h-screen flex flex-col selection:bg-primary-light selection:text-primary">
+
+  <!-- Admin Top Bar -->
+  <header class="sticky top-0 z-30 bg-surface border-b border-border h-16 flex items-center px-4 sm:px-6 justify-between">
+    <div class="flex items-center gap-4">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/images/logo/wonderplay-logo.svg" alt="WonderPlay" class="h-9 w-auto dark:hidden" />
+        <img src="../assets/images/logo/wonderplay-logo-dark.svg" alt="WonderPlay" class="h-9 w-auto hidden dark:block" />
+      </a>
+      <span class="hidden sm:inline-block text-xs font-bold px-2.5 py-1 bg-primary text-white rounded-full">ADMIN CONSOLE</span>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="../index.html" class="text-xs font-semibold text-text-muted hover:text-primary hidden md:inline-flex items-center gap-1">
+        <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+        <span>Public Website</span>
+      </a>
+
+      <!-- RTL & Theme -->
+      <button class="rtl-toggle-btn w-8 h-8 rounded-full bg-surface border border-border flex items-center justify-center text-xs font-bold text-text-main" aria-label="Toggle Direction">
+        <span class="rtl-btn-text">RTL</span>
+      </button>
+      <button class="theme-toggle-btn w-8 h-8 rounded-full bg-surface border border-border flex items-center justify-center text-text-main" aria-label="Toggle Theme">
+        <i data-lucide="moon" class="theme-icon w-4 h-4"></i>
+      </button>
+
+      <!-- Admin Manager Badge -->
+      <div class="flex items-center gap-2 pl-2 border-l border-border">
+        <div class="w-8 h-8 rounded-full bg-primary text-white font-bold flex items-center justify-center text-xs">AD</div>
+        <div class="hidden sm:block text-left">
+          <div class="text-xs font-bold font-heading text-text-main">Marcus Chen</div>
+          <div class="text-[10px] text-text-muted">Operations Manager</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="flex-grow flex">
+            <!-- Admin Sidebar -->
+    <aside class="w-64 bg-surface border-r border-border p-4 hidden lg:flex flex-col justify-between shrink-0 overflow-y-auto max-h-[calc(100vh-4rem)]">
+      <div class="space-y-1">
+        <div class="px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-text-muted">Management</div>
+        <a href="index.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+          <span>Overview</span>
+        </a>
+        <a href="parents.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition bg-primary text-white shadow-playful">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>Parent Management</span>
+        </a>
+        <a href="children.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="baby" class="w-4 h-4"></i>
+          <span>Children</span>
+        </a>
+        <a href="bookings.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="calendar-check" class="w-4 h-4"></i>
+          <span>Bookings</span>
+        </a>
+        <a href="play-zones.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="shapes" class="w-4 h-4"></i>
+          <span>Play Zones</span>
+        </a>
+        <a href="party-bookings.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="cake" class="w-4 h-4"></i>
+          <span>Birthday Parties</span>
+        </a>
+        <a href="memberships.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          <span>Memberships</span>
+        </a>
+        <a href="payments.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="credit-card" class="w-4 h-4"></i>
+          <span>Payments</span>
+        </a>
+        <a href="messages.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Messages</span>
+        </a>
+        <a href="reviews.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="star" class="w-4 h-4"></i>
+          <span>Reviews</span>
+        </a>
+        <a href="reports.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+          <span>Reports</span>
+        </a>
+        <a href="analytics.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="line-chart" class="w-4 h-4"></i>
+          <span>Analytics</span>
+        </a>
+        <a href="settings.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+          <span>Settings</span>
+        </a>
+      </div>
+
+      <div class="pt-4 border-t border-border">
+        <a href="../pages/login.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-primary hover:bg-primary-light transition">
+          <i data-lucide="log-out" class="w-4 h-4"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Admin Content -->
+    <main class="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl overflow-x-hidden">
+      <!-- Top Breadcrumbs & Back -->
+      <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+        <div class="flex items-center gap-2 text-xs">
+          <a href="parents.html" class="text-text-muted hover:text-primary flex items-center gap-1 font-semibold">
+            <i data-lucide="arrow-left" class="w-4 h-4"></i>
+            <span>Back to Parents</span>
+          </a>
+          <span class="text-text-muted">/</span>
+          <span class="text-text-main font-bold">Sarah Miller (Family ID #WP-8842)</span>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button class="btn-playful btn-outline-primary text-xs py-2 px-4 flex items-center gap-1.5" onclick="alert('Password reset link sent to sarah@example.com')">
+            <i data-lucide="key" class="w-3.5 h-3.5"></i>
+            <span>Reset Password</span>
+          </button>
+          <a href="bookings.html" class="btn-playful btn-primary text-xs py-2 px-4 flex items-center gap-1.5">
+            <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i>
+            <span>Create Booking</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- PARENT PROFILE HEADER CARD -->
+      <div class="bg-surface rounded-3xl border-2 border-border card-playful p-6 mb-8">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-6 border-b border-border">
+          <div class="flex items-center gap-4">
+            <div class="relative">
+              <img src="../assets/images/dashboard/avatar-parent.webp" alt="Sarah Miller" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover border-2 border-primary shadow-md" />
+              <span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-mint border-2 border-surface flex items-center justify-center text-[10px] text-white">✓</span>
+            </div>
+            <div>
+              <div class="flex flex-wrap items-center gap-2">
+                <h1 class="font-heading font-bold text-2xl sm:text-3xl text-text-main">Sarah Miller</h1>
+                <span class="sticker-tag sticker-mint text-xs">Active Account</span>
+                <span class="sticker-tag sticker-primary text-xs">Adventure Plus Member</span>
+              </div>
+              <p class="text-xs text-text-muted mt-1">Member since March 12, 2025 &bull; Last visit: 2 days ago (Toddler Cove)</p>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-2">
+            <a href="mailto:sarah@example.com" class="btn-playful bg-surface-alt border border-border text-xs py-2 px-3 flex items-center gap-1.5 text-text-main hover:text-primary">
+              <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+              <span>Email</span>
+            </a>
+            <a href="tel:+15552345678" class="btn-playful bg-surface-alt border border-border text-xs py-2 px-3 flex items-center gap-1.5 text-text-main hover:text-primary">
+              <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+              <span>Call Parent</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact & Emergency Details -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-6 text-xs">
+          <div class="p-3 bg-surface-alt/40 rounded-2xl border border-border">
+            <span class="text-text-muted font-medium">Email Address</span>
+            <div class="font-bold text-text-main text-sm mt-0.5">sarah@example.com</div>
+          </div>
+          <div class="p-3 bg-surface-alt/40 rounded-2xl border border-border">
+            <span class="text-text-muted font-medium">Primary Phone</span>
+            <div class="font-bold text-text-main text-sm mt-0.5">+1 (555) 234-5678</div>
+          </div>
+          <div class="p-3 bg-surface-alt/40 rounded-2xl border border-border">
+            <span class="text-text-muted font-medium">Emergency Contact</span>
+            <div class="font-bold text-text-main text-sm mt-0.5">Mark Miller (Spouse) &bull; +1 (555) 998-1122</div>
+          </div>
+          <div class="p-3 bg-surface-alt/40 rounded-2xl border border-border">
+            <span class="text-text-muted font-medium">Signed Digital Waiver</span>
+            <div class="font-bold text-mint text-sm mt-0.5 flex items-center gap-1">
+              <i data-lucide="file-check-2" class="w-4 h-4"></i>
+              <span>Verified (Valid thru 2027)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 KEY STATISTICS METRICS -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div class="bg-surface rounded-2xl border-2 border-border p-4 shadow-sm card-playful">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-text-muted">Total Lifetime Spend</span>
+            <div class="w-8 h-8 rounded-xl bg-primary-light text-primary flex items-center justify-center">
+              <i data-lucide="dollar-sign" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="font-heading font-bold text-2xl text-text-main mt-2">$628.00</div>
+          <div class="text-[11px] text-mint mt-1">100% on-time payments</div>
+        </div>
+
+        <div class="bg-surface rounded-2xl border-2 border-border p-4 shadow-sm card-playful">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-text-muted">Total Park Visits</span>
+            <div class="w-8 h-8 rounded-xl bg-secondary-light text-secondary flex items-center justify-center">
+              <i data-lucide="ticket" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="font-heading font-bold text-2xl text-text-main mt-2">14 Visits</div>
+          <div class="text-[11px] text-secondary mt-1">Avg 2.4 hrs per visit</div>
+        </div>
+
+        <div class="bg-surface rounded-2xl border-2 border-border p-4 shadow-sm card-playful">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-text-muted">Upcoming Bookings</span>
+            <div class="w-8 h-8 rounded-xl bg-mint-light text-mint flex items-center justify-center">
+              <i data-lucide="calendar" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="font-heading font-bold text-2xl text-text-main mt-2">2 Bookings</div>
+          <div class="text-[11px] text-text-muted mt-1">Next: Saturday 10:00 AM</div>
+        </div>
+
+        <div class="bg-surface rounded-2xl border-2 border-border p-4 shadow-sm card-playful">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-text-muted">WonderPoints Balance</span>
+            <div class="w-8 h-8 rounded-xl bg-accent-light text-amber-600 flex items-center justify-center">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="font-heading font-bold text-2xl text-text-main mt-2">1,450 pts</div>
+          <div class="text-[11px] text-amber-600 mt-1">Tier: Gold Family</div>
+        </div>
+      </div>
+
+      <!-- REGISTERED CHILDREN SECTION -->
+      <div class="mb-8">
+        <div class="flex items-center justify-between mb-4">
+          <div>
+            <h2 class="font-heading font-bold text-xl text-text-main">Registered Children (2)</h2>
+            <p class="text-xs text-text-muted">Active child profiles linked to this parent account.</p>
+          </div>
+          <button class="btn-playful btn-outline-primary text-xs py-1.5 px-3" onclick="alert('Child adder modal opened')">+ Add Child</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Child 1 -->
+          <div class="bg-surface rounded-2xl border-2 border-border p-5 card-playful flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-secondary-light text-secondary font-heading font-bold text-xl flex items-center justify-center shrink-0">
+              LM
+            </div>
+            <div class="flex-1 text-xs space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-heading font-bold text-base text-text-main">Leo Miller</span>
+                <span class="sticker-tag sticker-secondary text-[11px]">Age 5 (Ages 3–5)</span>
+              </div>
+              <div class="text-text-muted">Birthday: May 14, 2021 &bull; Shoe Size: Kid 11</div>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-2 py-0.5 rounded-md bg-mint-light text-mint font-bold">Waiver Signed</span>
+                <span class="px-2 py-0.5 rounded-md bg-surface-alt border border-border text-text-main font-semibold">Fav: Wonderland Maze</span>
+                <span class="px-2 py-0.5 rounded-md bg-surface-alt border border-border text-text-muted">Allergies: None</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Child 2 -->
+          <div class="bg-surface rounded-2xl border-2 border-border p-5 card-playful flex items-start gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-primary-light text-primary font-heading font-bold text-xl flex items-center justify-center shrink-0">
+              MM
+            </div>
+            <div class="flex-1 text-xs space-y-1.5">
+              <div class="flex items-center justify-between">
+                <span class="font-heading font-bold text-base text-text-main">Maya Miller</span>
+                <span class="sticker-tag sticker-mint text-[11px]">Age 2 (Ages 0–2)</span>
+              </div>
+              <div class="text-text-muted">Birthday: Nov 03, 2023 &bull; Shoe Size: Toddler 6</div>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-2 py-0.5 rounded-md bg-mint-light text-mint font-bold">Waiver Signed</span>
+                <span class="px-2 py-0.5 rounded-md bg-surface-alt border border-border text-text-main font-semibold">Fav: Toddler Ball Cove</span>
+                <span class="px-2 py-0.5 rounded-md bg-coral-light text-coral font-bold">Allergy: Dairy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RECENT BOOKINGS & ACTIVITY -->
+      <div class="bg-surface rounded-3xl border-2 border-border card-playful overflow-hidden mb-8">
+        <div class="p-5 border-b border-border flex items-center justify-between">
+          <div>
+            <h2 class="font-heading font-bold text-lg text-text-main">Booking &amp; Visit History</h2>
+            <p class="text-xs text-text-muted">Sessions booked, check-in timestamps, and package usages.</p>
+          </div>
+          <span class="sticker-tag sticker-accent text-xs">14 Total Records</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-surface-alt/60 border-b border-border font-heading font-bold text-text-main">
+              <tr>
+                <th class="p-4">Booking ID</th>
+                <th class="p-4">Date &amp; Time Slot</th>
+                <th class="p-4">Zone / Activity</th>
+                <th class="p-4">Children</th>
+                <th class="p-4">Amount</th>
+                <th class="p-4">Status</th>
+                <th class="p-4 text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border">
+              <tr class="hover:bg-surface-alt/30 transition">
+                <td class="p-4 font-bold text-primary">#BK-9912</td>
+                <td class="p-4">Sat, Aug 29, 2026<div class="text-[10px] text-text-muted">10:00 AM – 12:00 PM</div></td>
+                <td class="p-4 font-bold text-text-main">Adventure Arena + Toddler Cove</td>
+                <td class="p-4">Leo, Maya</td>
+                <td class="p-4 font-bold text-text-main">$48.00</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-mint-light text-mint">Confirmed</span></td>
+                <td class="p-4 text-right"><button class="btn-playful btn-outline-primary text-[10px] py-1 px-2.5">Manage</button></td>
+              </tr>
+              <tr class="hover:bg-surface-alt/30 transition">
+                <td class="p-4 font-bold text-primary">#BK-9804</td>
+                <td class="p-4">Sat, Aug 15, 2026<div class="text-[10px] text-text-muted">02:00 PM – 04:00 PM</div></td>
+                <td class="p-4 font-bold text-text-main">Wonderland Play Arena</td>
+                <td class="p-4">Leo</td>
+                <td class="p-4 font-bold text-text-main">$28.00</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-secondary-light text-secondary">Completed</span></td>
+                <td class="p-4 text-right"><button class="btn-playful btn-outline-primary text-[10px] py-1 px-2.5">Receipt</button></td>
+              </tr>
+              <tr class="hover:bg-surface-alt/30 transition">
+                <td class="p-4 font-bold text-primary">#BK-9650</td>
+                <td class="p-4">Sun, Aug 02, 2026<div class="text-[10px] text-text-muted">11:00 AM – 01:00 PM</div></td>
+                <td class="p-4 font-bold text-text-main">Toddler Sensory Corner</td>
+                <td class="p-4">Maya</td>
+                <td class="p-4 font-bold text-text-main">$22.00</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-secondary-light text-secondary">Completed</span></td>
+                <td class="p-4 text-right"><button class="btn-playful btn-outline-primary text-[10px] py-1 px-2.5">Receipt</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- INVOICES & BILLING -->
+      <div class="bg-surface rounded-3xl border-2 border-border card-playful overflow-hidden">
+        <div class="p-5 border-b border-border flex items-center justify-between">
+          <div>
+            <h2 class="font-heading font-bold text-lg text-text-main">Invoices &amp; Payment History</h2>
+            <p class="text-xs text-text-muted">Monthly membership debits and add-on payments.</p>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-surface-alt/60 border-b border-border font-heading font-bold text-text-main">
+              <tr>
+                <th class="p-4">Invoice #</th>
+                <th class="p-4">Date</th>
+                <th class="p-4">Description</th>
+                <th class="p-4">Payment Method</th>
+                <th class="p-4">Amount</th>
+                <th class="p-4">Status</th>
+                <th class="p-4 text-right">PDF</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border">
+              <tr class="hover:bg-surface-alt/30 transition">
+                <td class="p-4 font-bold text-text-main">INV-2026-0812</td>
+                <td class="p-4">Aug 12, 2026</td>
+                <td class="p-4 font-semibold text-text-main">Adventure Plus Monthly Renewal (Family Tier)</td>
+                <td class="p-4">Visa ending in 4242</td>
+                <td class="p-4 font-bold text-text-main">$129.00</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-mint-light text-mint">Paid</span></td>
+                <td class="p-4 text-right"><button class="btn-playful btn-outline-primary text-[10px] py-1 px-2">Download</button></td>
+              </tr>
+              <tr class="hover:bg-surface-alt/30 transition">
+                <td class="p-4 font-bold text-text-main">INV-2026-0712</td>
+                <td class="p-4">Jul 12, 2026</td>
+                <td class="p-4 font-semibold text-text-main">Adventure Plus Monthly Renewal (Family Tier)</td>
+                <td class="p-4">Visa ending in 4242</td>
+                <td class="p-4 font-bold text-text-main">$129.00</td>
+                <td class="p-4"><span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-mint-light text-mint">Paid</span></td>
+                <td class="p-4 text-right"><button class="btn-playful btn-outline-primary text-[10px] py-1 px-2">Download</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/validation.js"></script>
+  <script src="../assets/js/booking.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/admin.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%" fill="none">
+  <circle cx="300" cy="250" r="190" fill="#FFF8F0" opacity="0.85"/>
+  <!-- Parent -->
+  <circle cx="240" cy="160" r="44" fill="#FFD54F"/>
+  <path d="M210 220 Q240 200 270 220 L280 340 L200 340 Z" fill="#5B3FD3"/>
+  <!-- Child in Arms -->
+  <circle cx="350" cy="200" r="32" fill="#FFD54F"/>
+  <path d="M330 240 Q350 230 370 240 L375 310 L325 310 Z" fill="#FF7043"/>
+  <!-- Connecting Embrace Heart -->
+  <path d="M295 190 C295 175 315 175 315 190 C315 205 295 215 295 215 C295 215 275 205 275 190 C275 175 295 175 295 190 Z" fill="#FF7043"/>
+</svg>

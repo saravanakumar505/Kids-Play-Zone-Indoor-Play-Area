@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WonderPlay HTML Template Documentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    h1, h2, h3 { font-family: 'Fredoka', cursive; }
+  </style>
+</head>
+<body class="bg-amber-50/40 text-slate-800">
+  <div class="max-w-5xl mx-auto px-6 py-12">
+    <div class="bg-white p-8 md:p-12 rounded-3xl shadow-xl border border-amber-100 mb-8">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center font-bold text-xl">WP</div>
+        <div>
+          <h1 class="text-3xl font-bold text-indigo-900">WonderPlay Template Documentation</h1>
+          <p class="text-slate-500 text-sm">Version 1.0.0 &bull; Multipurpose Kids Play Zone &amp; Indoor Play Area HTML Template</p>
+        </div>
+      </div>
+      <hr class="my-6 border-slate-100">
+      
+      <h2 class="text-2xl font-bold text-slate-900 mb-3">1. Introduction</h2>
+      <p class="text-slate-600 mb-4 leading-relaxed">
+        WonderPlay is a clean, modern, and highly modular HTML5/TailwindCSS template built for indoor playgrounds, family entertainment parks, kids activity centers, and birthday venues.
+      </p>
+
+      <h2 class="text-2xl font-bold text-slate-900 mb-3 mt-8">2. Folder Structure</h2>
+      <pre class="bg-slate-900 text-amber-300 p-5 rounded-2xl text-xs overflow-x-auto">
+kids-play-zone/
+├── index.html              # Home 1 - Indoor Play + Family Experience
+├── pages/                  # Public Pages (Home 2, Play Zones, Parties, Safety, Blog, Pricing, Login, Register, etc.)
+├── dashboard/              # Dedicated Parent/Customer Dashboard with Multi-child session booking & QR Pass
+├── admin/                  # Dedicated Admin Management Dashboard with live charts & zone capacity meters
+├── assets/
+│   ├── css/                # style.css, dark-mode.css, rtl.css
+│   ├── js/                 # theme.js, rtl.js, navigation.js, validation.js, booking.js, dashboard.js, admin.js, main.js
+│   └── images/             # Local SVG assets (hero, zones, parties, team, testimonials, blog, gallery, logo)
+├── documentation/          # Buyer documentation
+└── README.md
+      </pre>
+
+      <h2 class="text-2xl font-bold text-slate-900 mb-3 mt-8">3. Color Customization</h2>
+      <p class="text-slate-600 mb-4">You can modify primary colors in <code class="bg-amber-100 px-2 py-0.5 rounded text-indigo-700">assets/css/style.css</code>:</p>
+      <pre class="bg-slate-900 text-emerald-400 p-5 rounded-2xl text-xs overflow-x-auto">
+:root {
+  --primary: #5B3FD3;      /* Deep Purple */
+  --secondary: #FF7A45;    /* Tangerine */
+  --accent: #FFD84D;       /* Sunshine Yellow */
+  --mint: #52D6B5;         /* Mint Green */
+  --background: #FFF9F0;   /* Warm Cream */
+  --text-main: #252238;    /* Deep Charcoal */
+}
+      </pre>
+
+      <h2 class="text-2xl font-bold text-slate-900 mb-3 mt-8">4. Features Included</h2>
+      <ul class="list-disc pl-5 space-y-2 text-slate-600">
+        <li>Dual Independent Dashboards: Separate Parent/Customer and Admin interfaces</li>
+        <li>Multi-Child Interactive Booking Wizard with real-time price &amp; slot calculations</li>
+        <li>Dark Mode toggle &amp; true bidirectional RTL layout switching</li>
+        <li>Responsive Navigation Drawer with auto-reset upon viewport expansion</li>
+        <li>Accessible forms with instant client-side validation</li>
+        <li>100% SVG Lucide Icons, zero emojis</li>
+        <li>Self-contained local vector graphics</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

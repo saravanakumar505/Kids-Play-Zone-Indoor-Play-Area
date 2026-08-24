@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="cpGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7043"/>
+      <stop offset="100%" stop-color="#FFB74D"/>
+    </linearGradient>
+    <linearGradient id="cpGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B3FD3"/>
+      <stop offset="100%" stop-color="#856BFF"/>
+    </linearGradient>
+  </defs>
+  <!-- Background Soft Blob Behind Subject -->
+  <circle cx="300" cy="260" r="190" fill="#FFF0EB" opacity="0.8"/>
+  <circle cx="420" cy="180" r="40" fill="#FFB74D" opacity="0.35"/>
+  <circle cx="160" cy="340" r="30" fill="#52D6B5" opacity="0.35"/>
+  
+  <!-- Soft Play Climber Platform -->
+  <path d="M120 380 Q300 340 480 380 L460 440 Q300 420 140 440 Z" fill="url(#cpGrad2)"/>
+  <path d="M160 320 L300 240 L440 320 L300 400 Z" fill="url(#cpGrad1)"/>
+  
+  <!-- Child Character Silhouette / Illustration -->
+  <circle cx="300" cy="150" r="48" fill="#FFD54F"/> <!-- Head -->
+  <path d="M280 120 Q300 100 320 120" stroke="#FF7043" stroke-width="8" stroke-linecap="round"/> <!-- Cap/Hair -->
+  <!-- Smile & Cheerful Eyes -->
+  <circle cx="288" cy="146" r="5" fill="#211A38"/>
+  <circle cx="312" cy="146" r="5" fill="#211A38"/>
+  <path d="M292 162 Q300 172 308 162" stroke="#FF7043" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="278" cy="155" r="7" fill="#FF8A65" opacity="0.6"/>
+  <circle cx="322" cy="155" r="7" fill="#FF8A65" opacity="0.6"/>
+  
+  <!-- Torso & Active Arms -->
+  <path d="M260 210 Q300 195 340 210 L330 280 L270 280 Z" fill="#5B3FD3"/>
+  <path d="M260 215 L200 170" stroke="#FFD54F" stroke-width="18" stroke-linecap="round"/> <!-- Left Arm Raised -->
+  <path d="M340 215 L400 170" stroke="#FFD54F" stroke-width="18" stroke-linecap="round"/> <!-- Right Arm Raised -->
+  
+  <!-- Star & Sparkle Accents -->
+  <path d="M440 120 L446 135 L460 135 L450 145 L454 160 L440 150 L426 160 L430 145 L420 135 L434 135 Z" fill="#FFB74D"/>
+  <path d="M150 160 L154 172 L166 172 L157 180 L160 192 L150 184 L140 192 L143 180 L134 172 L146 172 Z" fill="#52D6B5"/>
+</svg>

@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parent Management | WonderPlay Admin Management</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo/favicon.svg" />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#FF7043',
+            'primary-hover': '#E65A2E',
+            'primary-light': '#FFF0EB',
+            'primary-dark': '#D9482B',
+            secondary: '#5B3FD3',
+            'secondary-hover': '#4B32B6',
+            'secondary-light': '#F3F0FF',
+            accent: '#FFB74D',
+            'accent-hover': '#FFA726',
+            'accent-light': '#FFF8E7',
+            mint: '#52D6B5',
+            'mint-hover': '#3DC2A0',
+            'mint-light': '#E8F9F5',
+            coral: '#FF7043',
+            'coral-light': '#FFF0EB',
+            background: 'var(--background)',
+            surface: 'var(--surface)',
+            'surface-alt': 'var(--surface-alt)',
+            'surface-card': 'var(--surface-card)',
+            border: 'var(--border)',
+            'text-main': 'var(--text-main)',
+            'text-muted': 'var(--text-muted)',
+            'text-light': 'var(--text-light)',
+          },
+          fontFamily: {
+            heading: ['Fredoka', 'cursive', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/dark-mode.css" />
+  <link rel="stylesheet" href="../assets/css/rtl.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-background text-text-main min-h-screen flex flex-col selection:bg-primary-light selection:text-primary">
+
+  <!-- Admin Top Bar -->
+  <header class="sticky top-0 z-30 bg-surface border-b border-border h-16 flex items-center px-4 sm:px-6 justify-between">
+    <div class="flex items-center gap-4">
+      <a href="../index.html" class="flex items-center gap-2">
+        <img src="../assets/images/logo/wonderplay-logo.svg" alt="WonderPlay" class="h-9 w-auto dark:hidden" />
+        <img src="../assets/images/logo/wonderplay-logo-dark.svg" alt="WonderPlay" class="h-9 w-auto hidden dark:block" />
+      </a>
+      <span class="hidden sm:inline-block text-xs font-bold px-2.5 py-1 bg-primary text-white rounded-full">ADMIN CONSOLE</span>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="../index.html" class="text-xs font-semibold text-text-muted hover:text-primary hidden md:inline-flex items-center gap-1">
+        <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+        <span>Public Website</span>
+      </a>
+
+      <!-- RTL & Theme -->
+      <button class="rtl-toggle-btn w-8 h-8 rounded-full bg-surface border border-border flex items-center justify-center text-xs font-bold text-text-main" aria-label="Toggle Direction">
+        <span class="rtl-btn-text">RTL</span>
+      </button>
+      <button class="theme-toggle-btn w-8 h-8 rounded-full bg-surface border border-border flex items-center justify-center text-text-main" aria-label="Toggle Theme">
+        <i data-lucide="moon" class="theme-icon w-4 h-4"></i>
+      </button>
+
+      <!-- Admin Manager Badge -->
+      <div class="flex items-center gap-2 pl-2 border-l border-border">
+        <div class="w-8 h-8 rounded-full bg-primary text-white font-bold flex items-center justify-center text-xs">AD</div>
+        <div class="hidden sm:block text-left">
+          <div class="text-xs font-bold font-heading text-text-main">Marcus Chen</div>
+          <div class="text-[10px] text-text-muted">Operations Manager</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="flex-grow flex">
+            <!-- Admin Sidebar -->
+    <aside class="w-64 bg-surface border-r border-border p-4 hidden lg:flex flex-col justify-between shrink-0 overflow-y-auto max-h-[calc(100vh-4rem)]">
+      <div class="space-y-1">
+        <div class="px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-text-muted">Management</div>
+        <a href="index.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
+          <span>Overview</span>
+        </a>
+        <a href="parents.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition bg-primary text-white shadow-playful">
+          <i data-lucide="users" class="w-4 h-4"></i>
+          <span>Parent Management</span>
+        </a>
+        <a href="children.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="baby" class="w-4 h-4"></i>
+          <span>Children</span>
+        </a>
+        <a href="bookings.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="calendar-check" class="w-4 h-4"></i>
+          <span>Bookings</span>
+        </a>
+        <a href="play-zones.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="shapes" class="w-4 h-4"></i>
+          <span>Play Zones</span>
+        </a>
+        <a href="party-bookings.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="cake" class="w-4 h-4"></i>
+          <span>Birthday Parties</span>
+        </a>
+        <a href="memberships.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="award" class="w-4 h-4"></i>
+          <span>Memberships</span>
+        </a>
+        <a href="payments.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="credit-card" class="w-4 h-4"></i>
+          <span>Payments</span>
+        </a>
+        <a href="messages.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Messages</span>
+        </a>
+        <a href="reviews.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="star" class="w-4 h-4"></i>
+          <span>Reviews</span>
+        </a>
+        <a href="reports.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+          <span>Reports</span>
+        </a>
+        <a href="analytics.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="line-chart" class="w-4 h-4"></i>
+          <span>Analytics</span>
+        </a>
+        <a href="settings.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+          <i data-lucide="settings" class="w-4 h-4"></i>
+          <span>Settings</span>
+        </a>
+      </div>
+
+      <div class="pt-4 border-t border-border">
+        <a href="../pages/login.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold text-primary hover:bg-primary-light transition">
+          <i data-lucide="log-out" class="w-4 h-4"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Admin Content -->
+    <main class="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl overflow-x-hidden">
+                  <!-- Mobile Quick Menu -->
+      <div class="lg:hidden flex items-center gap-2 overflow-x-auto pb-4 mb-4 border-b border-border">
+        <a href="index.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-surface border border-border text-text-main">
+          Overview
+        </a>
+        <a href="parents.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-primary text-white">
+          Parent Management
+        </a>
+        <a href="children.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-surface border border-border text-text-main">
+          Children
+        </a>
+        <a href="bookings.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-surface border border-border text-text-main">
+          Bookings
+        </a>
+        <a href="play-zones.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-surface border border-border text-text-main">
+          Play Zones
+        </a>
+        <a href="party-bookings.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-surface border border-border text-text-main">
+          Birthday Parties
+        </a>
+        <a href="memberships.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-surface border border-border text-text-main">
+          Memberships
+        </a>
+        <a href="payments.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-surface border border-border text-text-main">
+          Payments
+        </a>
+        <a href="messages.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-surface border border-border text-text-main">
+          Messages
+        </a>
+        <a href="reviews.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-surface border border-border text-text-main">
+          Reviews
+        </a>
+        <a href="reports.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-surface border border-border text-text-main">
+          Reports
+        </a>
+        <a href="analytics.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-surface border border-border text-text-main">
+          Analytics
+        </a>
+        <a href="settings.html" class="px-3 py-1.5 rounded-xl font-heading text-xs font-semibold whitespace-nowrap bg-surface border border-border text-text-main">
+          Settings
+        </a>
+      </div>
+
+      <!-- HEADER -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+        <div>
+          <h1 class="font-heading font-bold text-2xl sm:text-3xl text-text-main">Parent Management</h1>
+          <p class="text-xs sm:text-sm text-text-muted mt-1">Manage registered parents and their family accounts.</p>
+        </div>
+        <button onclick="document.getElementById('add-parent-modal').classList.remove('hidden')" class="btn-playful btn-primary text-xs sm:text-sm py-2.5 px-4 sm:px-5 flex items-center gap-2 self-start sm:self-auto">
+          <i data-lucide="user-plus" class="w-4 h-4"></i>
+          <span>+ Add Parent</span>
+        </button>
+      </div>
+
+      <!-- 4 STATISTICS KPI CARDS -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <div class="bg-surface rounded-2xl border-2 border-border p-4 shadow-sm card-playful">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-text-muted">Total Parents</span>
+            <div class="w-8 h-8 rounded-xl bg-primary-light text-primary flex items-center justify-center">
+              <i data-lucide="users" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="font-heading font-bold text-2xl text-text-main mt-2">1,428</div>
+          <div class="text-[11px] text-mint mt-1">&uarr; +8.4% from last month</div>
+        </div>
+
+        <div class="bg-surface rounded-2xl border-2 border-border p-4 shadow-sm card-playful">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-text-muted">Active Parents</span>
+            <div class="w-8 h-8 rounded-xl bg-mint-light text-mint flex items-center justify-center">
+              <i data-lucide="user-check" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="font-heading font-bold text-2xl text-text-main mt-2">1,290</div>
+          <div class="text-[11px] text-text-muted mt-1">90.3% activity rate</div>
+        </div>
+
+        <div class="bg-surface rounded-2xl border-2 border-border p-4 shadow-sm card-playful">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-text-muted">New This Month</span>
+            <div class="w-8 h-8 rounded-xl bg-secondary-light text-secondary flex items-center justify-center">
+              <i data-lucide="sparkles" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="font-heading font-bold text-2xl text-text-main mt-2">+142</div>
+          <div class="text-[11px] text-secondary mt-1">New family signups</div>
+        </div>
+
+        <div class="bg-surface rounded-2xl border-2 border-border p-4 shadow-sm card-playful">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold text-text-muted">Members</span>
+            <div class="w-8 h-8 rounded-xl bg-accent-light text-amber-600 flex items-center justify-center">
+              <i data-lucide="award" class="w-4 h-4"></i>
+            </div>
+          </div>
+          <div class="font-heading font-bold text-2xl text-text-main mt-2">894</div>
+          <div class="text-[11px] text-amber-600 mt-1">62.6% subscriber base</div>
+        </div>
+      </div>
+
+      <!-- SEARCH & FILTER TOOLBAR -->
+      <div class="bg-surface rounded-2xl border-2 border-border p-4 mb-6 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="relative w-full md:w-80">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-text-muted"></i>
+          <input type="text" id="parent-search" placeholder="Search by name, email, or phone..." class="w-full pl-9 pr-4 py-2 text-xs rounded-xl bg-surface-alt/50 border border-border text-text-main focus:outline-none focus:border-primary" />
+        </div>
+
+        <div class="flex flex-wrap items-center gap-2.5 w-full md:w-auto">
+          <select class="px-3 py-2 text-xs rounded-xl bg-surface border border-border text-text-main focus:outline-none focus:border-primary">
+            <option value="all">All Memberships</option>
+            <option value="adventure">Adventure Plus</option>
+            <option value="starter">Play Starter</option>
+            <option value="vip">VIP Unlimited</option>
+            <option value="none">Pay As You Go</option>
+          </select>
+
+          <select class="px-3 py-2 text-xs rounded-xl bg-surface border border-border text-text-main focus:outline-none focus:border-primary">
+            <option value="all">All Status</option>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- DESKTOP / TABLET DATA TABLE -->
+      <div class="bg-surface rounded-3xl border-2 border-border card-playful overflow-hidden mb-6 hidden md:block">
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-xs">
+            <thead class="bg-surface-alt/60 border-b border-border font-heading font-bold text-text-main">
+              <tr>
+                <th class="p-4">Parent</th>
+                <th class="p-4">Children</th>
+                <th class="p-4">Email</th>
+                <th class="p-4">Phone</th>
+                <th class="p-4">Membership</th>
+                <th class="p-4">Bookings</th>
+                <th class="p-4">Status</th>
+                <th class="p-4 text-right">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-border">
+              <!-- Row 1 -->
+              <tr class="hover:bg-surface-alt/30 transition">
+                <td class="p-4">
+                  <div class="flex items-center gap-3">
+                    <img src="../assets/images/dashboard/avatar-parent.webp" alt="Sarah Miller" class="w-8 h-8 rounded-full object-cover border border-primary" />
+                    <div>
+                      <a href="parent-details.html?id=1" class="font-bold text-text-main hover:text-primary transition font-heading">Sarah Miller</a>
+                      <div class="text-[10px] text-text-muted">ID: #WP-8842</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="p-4">
+                  <div class="font-semibold text-text-main">2 Children</div>
+                  <div class="text-[10px] text-text-muted">Leo (5), Maya (2)</div>
+                </td>
+                <td class="p-4 text-text-main">sarah@example.com</td>
+                <td class="p-4 text-text-muted">+1 (555) 234-5678</td>
+                <td class="p-4">
+                  <span class="sticker-tag sticker-primary text-[11px]">Adventure Plus</span>
+                </td>
+                <td class="p-4 font-bold text-text-main">14 Visits</td>
+                <td class="p-4">
+                  <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-mint-light text-mint">Active</span>
+                </td>
+                <td class="p-4 text-right">
+                  <div class="flex items-center justify-end gap-1.5">
+                    <a href="parent-details.html?id=1" class="btn-playful btn-outline-primary text-[10px] py-1 px-2.5">View</a>
+                    <button class="btn-playful bg-surface-alt border border-border text-[10px] py-1 px-2 text-text-main hover:text-secondary" onclick="alert('Editing Sarah Miller')">Edit</button>
+                    <button class="btn-playful bg-surface-alt border border-border text-[10px] py-1 px-2 text-coral hover:bg-coral-light" onclick="confirm('Delete parent account?')">Delete</button>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 2 -->
+              <tr class="hover:bg-surface-alt/30 transition">
+                <td class="p-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-secondary-light text-secondary font-bold flex items-center justify-center text-xs">DS</div>
+                    <div>
+                      <a href="parent-details.html?id=2" class="font-bold text-text-main hover:text-secondary transition font-heading">David Sterling</a>
+                      <div class="text-[10px] text-text-muted">ID: #WP-8843</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="p-4">
+                  <div class="font-semibold text-text-main">1 Child</div>
+                  <div class="text-[10px] text-text-muted">Ethan (4)</div>
+                </td>
+                <td class="p-4 text-text-main">david@example.com</td>
+                <td class="p-4 text-text-muted">+1 (555) 345-6789</td>
+                <td class="p-4">
+                  <span class="sticker-tag sticker-accent text-[11px]">Play Starter</span>
+                </td>
+                <td class="p-4 font-bold text-text-main">9 Visits</td>
+                <td class="p-4">
+                  <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-mint-light text-mint">Active</span>
+                </td>
+                <td class="p-4 text-right">
+                  <div class="flex items-center justify-end gap-1.5">
+                    <a href="parent-details.html?id=2" class="btn-playful btn-outline-primary text-[10px] py-1 px-2.5">View</a>
+                    <button class="btn-playful bg-surface-alt border border-border text-[10px] py-1 px-2 text-text-main hover:text-secondary" onclick="alert('Editing David Sterling')">Edit</button>
+                    <button class="btn-playful bg-surface-alt border border-border text-[10px] py-1 px-2 text-coral hover:bg-coral-light" onclick="confirm('Delete parent account?')">Delete</button>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 3 -->
+              <tr class="hover:bg-surface-alt/30 transition">
+                <td class="p-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-mint-light text-mint font-bold flex items-center justify-center text-xs">ER</div>
+                    <div>
+                      <a href="parent-details.html?id=3" class="font-bold text-text-main hover:text-primary transition font-heading">Elena Rostova</a>
+                      <div class="text-[10px] text-text-muted">ID: #WP-8844</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="p-4">
+                  <div class="font-semibold text-text-main">3 Children</div>
+                  <div class="text-[10px] text-text-muted">Lucas (8), Mia (6), Sofia (3)</div>
+                </td>
+                <td class="p-4 text-text-main">elena.r@example.com</td>
+                <td class="p-4 text-text-muted">+1 (555) 456-7890</td>
+                <td class="p-4">
+                  <span class="sticker-tag sticker-secondary text-[11px]">VIP Unlimited</span>
+                </td>
+                <td class="p-4 font-bold text-text-main">26 Visits</td>
+                <td class="p-4">
+                  <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-mint-light text-mint">Active</span>
+                </td>
+                <td class="p-4 text-right">
+                  <div class="flex items-center justify-end gap-1.5">
+                    <a href="parent-details.html?id=3" class="btn-playful btn-outline-primary text-[10px] py-1 px-2.5">View</a>
+                    <button class="btn-playful bg-surface-alt border border-border text-[10px] py-1 px-2 text-text-main hover:text-secondary" onclick="alert('Editing Elena Rostova')">Edit</button>
+                    <button class="btn-playful bg-surface-alt border border-border text-[10px] py-1 px-2 text-coral hover:bg-coral-light" onclick="confirm('Delete parent account?')">Delete</button>
+                  </div>
+                </td>
+              </tr>
+
+              <!-- Row 4 -->
+              <tr class="hover:bg-surface-alt/30 transition">
+                <td class="p-4">
+                  <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-primary-light text-primary font-bold flex items-center justify-center text-xs">MW</div>
+                    <div>
+                      <a href="parent-details.html?id=4" class="font-bold text-text-main hover:text-primary transition font-heading">Michael Wong</a>
+                      <div class="text-[10px] text-text-muted">ID: #WP-8845</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="p-4">
+                  <div class="font-semibold text-text-main">1 Child</div>
+                  <div class="text-[10px] text-text-muted">Chloe (7)</div>
+                </td>
+                <td class="p-4 text-text-main">m.wong@example.com</td>
+                <td class="p-4 text-text-muted">+1 (555) 567-8901</td>
+                <td class="p-4">
+                  <span class="sticker-tag bg-surface-alt text-text-muted border-border text-[11px]">Pay As You Go</span>
+                </td>
+                <td class="p-4 font-bold text-text-main">4 Visits</td>
+                <td class="p-4">
+                  <span class="px-2 py-0.5 rounded-full text-[11px] font-bold bg-surface-alt text-text-muted">Inactive</span>
+                </td>
+                <td class="p-4 text-right">
+                  <div class="flex items-center justify-end gap-1.5">
+                    <a href="parent-details.html?id=4" class="btn-playful btn-outline-primary text-[10px] py-1 px-2.5">View</a>
+                    <button class="btn-playful bg-surface-alt border border-border text-[10px] py-1 px-2 text-text-main hover:text-secondary" onclick="alert('Editing Michael Wong')">Edit</button>
+                    <button class="btn-playful bg-surface-alt border border-border text-[10px] py-1 px-2 text-coral hover:bg-coral-light" onclick="confirm('Delete parent account?')">Delete</button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- MOBILE RESPONSIVE CARD VIEW (Stretching/Stacking nicely on mobile) -->
+      <div class="md:hidden space-y-4 mb-6">
+        <!-- Card 1 -->
+        <div class="bg-surface rounded-2xl border-2 border-border p-4 shadow-sm card-playful space-y-3">
+          <div class="flex items-center justify-between pb-2 border-b border-border">
+            <div class="flex items-center gap-2.5">
+              <img src="../assets/images/dashboard/avatar-parent.webp" alt="Sarah Miller" class="w-10 h-10 rounded-full object-cover border border-primary" />
+              <div>
+                <a href="parent-details.html?id=1" class="font-bold text-sm text-text-main hover:text-primary font-heading">Sarah Miller</a>
+                <div class="text-[10px] text-text-muted">ID: #WP-8842</div>
+              </div>
+            </div>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-mint-light text-mint">Active</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div>
+              <span class="text-text-muted text-[10px]">Email</span>
+              <div class="font-medium text-text-main truncate">sarah@example.com</div>
+            </div>
+            <div>
+              <span class="text-text-muted text-[10px]">Phone</span>
+              <div class="font-medium text-text-main">+1 (555) 234-5678</div>
+            </div>
+            <div>
+              <span class="text-text-muted text-[10px]">Children</span>
+              <div class="font-semibold text-text-main">2 (Leo, Maya)</div>
+            </div>
+            <div>
+              <span class="text-text-muted text-[10px]">Membership</span>
+              <div><span class="sticker-tag sticker-primary text-[10px]">Adventure Plus</span></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 pt-2 border-t border-border">
+            <a href="parent-details.html?id=1" class="btn-playful btn-primary text-xs py-2 px-4 flex-1 text-center">View</a>
+            <button class="btn-playful btn-outline-primary text-xs py-2 px-3 flex-1" onclick="alert('Edit Parent')">Edit</button>
+            <button class="btn-playful bg-surface-alt border border-border text-xs py-2 px-3 text-coral" onclick="confirm('Delete parent?')">Delete</button>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-surface rounded-2xl border-2 border-border p-4 shadow-sm card-playful space-y-3">
+          <div class="flex items-center justify-between pb-2 border-b border-border">
+            <div class="flex items-center gap-2.5">
+              <div class="w-10 h-10 rounded-full bg-secondary-light text-secondary font-bold flex items-center justify-center text-sm">DS</div>
+              <div>
+                <a href="parent-details.html?id=2" class="font-bold text-sm text-text-main hover:text-secondary font-heading">David Sterling</a>
+                <div class="text-[10px] text-text-muted">ID: #WP-8843</div>
+              </div>
+            </div>
+            <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-mint-light text-mint">Active</span>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div>
+              <span class="text-text-muted text-[10px]">Email</span>
+              <div class="font-medium text-text-main truncate">david@example.com</div>
+            </div>
+            <div>
+              <span class="text-text-muted text-[10px]">Phone</span>
+              <div class="font-medium text-text-main">+1 (555) 345-6789</div>
+            </div>
+            <div>
+              <span class="text-text-muted text-[10px]">Children</span>
+              <div class="font-semibold text-text-main">1 (Ethan)</div>
+            </div>
+            <div>
+              <span class="text-text-muted text-[10px]">Membership</span>
+              <div><span class="sticker-tag sticker-accent text-[10px]">Play Starter</span></div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 pt-2 border-t border-border">
+            <a href="parent-details.html?id=2" class="btn-playful btn-primary text-xs py-2 px-4 flex-1 text-center">View</a>
+            <button class="btn-playful btn-outline-primary text-xs py-2 px-3 flex-1" onclick="alert('Edit Parent')">Edit</button>
+            <button class="btn-playful bg-surface-alt border border-border text-xs py-2 px-3 text-coral" onclick="confirm('Delete parent?')">Delete</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- ADD PARENT MODAL -->
+  <div id="add-parent-modal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+    <div class="bg-surface rounded-3xl border-2 border-border p-6 max-w-lg w-full shadow-2xl space-y-4">
+      <div class="flex items-center justify-between pb-3 border-b border-border">
+        <h3 class="font-heading font-bold text-lg text-text-main">Add New Parent Profile</h3>
+        <button onclick="document.getElementById('add-parent-modal').classList.add('hidden')" class="w-8 h-8 rounded-full hover:bg-surface-alt flex items-center justify-center text-text-muted">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <form onsubmit="event.preventDefault(); alert('New parent account created!'); document.getElementById('add-parent-modal').classList.add('hidden');" class="space-y-3 text-xs">
+        <div>
+          <label class="block font-semibold text-text-main mb-1">Parent Full Name</label>
+          <input type="text" required placeholder="e.g. Jessica Alba" class="w-full px-3 py-2 rounded-xl bg-surface-alt/50 border border-border text-text-main focus:outline-none focus:border-primary" />
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-text-main mb-1">Email Address</label>
+            <input type="email" required placeholder="parent@example.com" class="w-full px-3 py-2 rounded-xl bg-surface-alt/50 border border-border text-text-main focus:outline-none focus:border-primary" />
+          </div>
+          <div>
+            <label class="block font-semibold text-text-main mb-1">Phone Number</label>
+            <input type="tel" required placeholder="+1 (555) 000-0000" class="w-full px-3 py-2 rounded-xl bg-surface-alt/50 border border-border text-text-main focus:outline-none focus:border-primary" />
+          </div>
+        </div>
+        <div>
+          <label class="block font-semibold text-text-main mb-1">Membership Plan</label>
+          <select class="w-full px-3 py-2 rounded-xl bg-surface border border-border text-text-main focus:outline-none focus:border-primary">
+            <option>Adventure Plus (Monthly)</option>
+            <option>Play Starter (Monthly)</option>
+            <option>VIP Unlimited (Annual)</option>
+            <option>Pay As You Go</option>
+          </select>
+        </div>
+        <div class="pt-3 border-t border-border flex items-center justify-end gap-2">
+          <button type="button" onclick="document.getElementById('add-parent-modal').classList.add('hidden')" class="btn-playful bg-surface-alt border border-border py-2 px-4 text-text-main">Cancel</button>
+          <button type="submit" class="btn-playful btn-primary py-2 px-5">Save Parent</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="../assets/js/theme.js"></script>
+  <script src="../assets/js/rtl.js"></script>
+  <script src="../assets/js/navigation.js"></script>
+  <script src="../assets/js/validation.js"></script>
+  <script src="../assets/js/booking.js"></script>
+  <script src="../assets/js/dashboard.js"></script>
+  <script src="../assets/js/admin.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

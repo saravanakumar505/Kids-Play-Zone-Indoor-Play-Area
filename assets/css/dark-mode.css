@@ -1,0 +1,292 @@
+/* ==========================================================================
+   WonderPlay - Dark Mode Stylesheet (Deep Plum & Deep Navy Theme)
+   Global Dark Palette:
+   Background: #15152B (Deep Navy)
+   Surface: #211A38 (Dark Plum)
+   Surface-Alt: #1C1730
+   Border: #352C54
+   Primary: #FF7043 (Coral remains vivid)
+   Secondary: #856BFF (Lightened Purple)
+   Accent: #FFB74D (Warm Yellow)
+   ========================================================================== */
+
+html.dark {
+  --background: #15152B;
+  --surface: #211A38;
+  --surface-alt: #1C1730;
+  --surface-card: #211A38;
+  --border: #352C54;
+  --border-focus: #FF7043;
+
+  --text-main: #FFFFFF;
+  --text-muted: #CBD5E1;
+  --text-light: #94A3B8;
+
+  --primary: #FF7043;
+  --primary-hover: #FF8A65;
+  --primary-light: rgba(255, 112, 67, 0.22);
+  --primary-glow: rgba(255, 112, 67, 0.4);
+
+  --secondary: #856BFF;
+  --secondary-hover: #9E8AFF;
+  --secondary-light: rgba(133, 107, 255, 0.22);
+
+  --accent: #FFB74D;
+  --accent-hover: #FFCA28;
+  --accent-light: rgba(255, 183, 77, 0.22);
+
+  --mint: #52D6B5;
+  --mint-hover: #6AE8C8;
+  --mint-light: rgba(82, 214, 181, 0.22);
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
+  --shadow-playful: 4px 4px 0px rgba(255, 112, 67, 0.25);
+  --shadow-playful-hover: 6px 6px 0px rgba(255, 112, 67, 0.45);
+}
+
+html.dark,
+html.dark body,
+html.dark main {
+  background-color: #15152B !important;
+  color: var(--text-main);
+}
+
+/* Dark Mode Base Container & Section Classes */
+html.dark .bg-background,
+html.dark [class*="bg-background"] {
+  background-color: #15152B !important;
+}
+
+html.dark .bg-surface,
+html.dark [class*="bg-surface"] {
+  background-color: #211A38 !important;
+}
+
+html.dark .bg-surface-alt,
+html.dark [class*="bg-surface-alt"] {
+  background-color: #1C1730 !important;
+}
+
+html.dark [class*="bg-surface-alt/"],
+html.dark section[class*="bg-surface-alt/"],
+html.dark div[class*="bg-surface-alt/"] {
+  background-color: rgba(28, 23, 48, 0.75) !important;
+  border-color: #352C54 !important;
+}
+
+html.dark .border-border,
+html.dark [class*="border-border"] {
+  border-color: #352C54 !important;
+}
+
+html.dark section {
+  border-color: #352C54 !important;
+}
+
+/* Headings & Text in Dark Mode */
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6,
+html.dark .font-heading {
+  color: #FFFFFF !important;
+}
+
+html.dark .hero-desc-entry,
+html.dark .text-text-muted,
+html.dark p.text-text-muted {
+  color: #CBD5E1 !important;
+}
+
+html.dark .text-text-main {
+  color: #FFFFFF !important;
+}
+
+/* Hero Gradient Overlay in Dark Mode */
+html.dark .hero-gradient-overlay,
+html.dark [class*="from-surface"] {
+  background: linear-gradient(to right, rgba(21, 21, 43, 0.94) 0%, rgba(21, 21, 43, 0.88) 50%, rgba(21, 21, 43, 0.72) 100%) !important;
+}
+
+/* Sticker Tags in Dark Mode - High Contrast */
+html.dark .sticker-primary {
+  background-color: rgba(255, 112, 67, 0.2) !important;
+  color: #FF8A65 !important;
+  border-color: rgba(255, 112, 67, 0.45) !important;
+}
+
+html.dark .sticker-secondary {
+  background-color: rgba(133, 107, 255, 0.2) !important;
+  color: #B4A5FF !important;
+  border-color: rgba(133, 107, 255, 0.45) !important;
+}
+
+html.dark .sticker-accent {
+  background-color: rgba(255, 183, 77, 0.2) !important;
+  color: #FFD54F !important;
+  border-color: rgba(255, 183, 77, 0.45) !important;
+}
+
+html.dark .sticker-mint {
+  background-color: rgba(82, 214, 181, 0.2) !important;
+  color: #52D6B5 !important;
+  border-color: rgba(82, 214, 181, 0.45) !important;
+}
+
+/* Counters & Badges */
+html.dark .counter-val {
+  color: inherit;
+}
+
+/* Header & Drawers */
+html.dark #main-header,
+html.dark header {
+  background-color: var(--surface) !important;
+  color: var(--text-main) !important;
+  border-bottom-color: var(--border) !important;
+}
+
+html.dark #mobile-drawer {
+  background-color: var(--surface) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border) !important;
+}
+
+html.dark .dropdown-menu {
+  background-color: #211A38 !important;
+  border-color: #352C54 !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+html.dark .dropdown-menu a {
+  color: #FFFFFF !important;
+}
+
+html.dark .dropdown-menu a:hover,
+html.dark .dropdown-menu a.active,
+html.dark .dropdown-menu a.dropdown-item-active {
+  background-color: rgba(255, 112, 67, 0.18) !important;
+}
+
+html.dark .dropdown-menu a .text-text-main,
+html.dark .dropdown-menu a .font-heading {
+  color: #FFFFFF !important;
+}
+
+html.dark .dropdown-menu a:hover .text-text-main,
+html.dark .dropdown-menu a:hover .font-heading,
+html.dark .dropdown-menu a.active .text-text-main,
+html.dark .dropdown-menu a.active .font-heading {
+  color: #FF7043 !important;
+}
+
+html.dark .dropdown-menu a .text-text-muted {
+  color: #CBD5E1 !important;
+}
+
+html.dark .dropdown-menu a:hover .text-text-muted {
+  color: #E2E8F0 !important;
+}
+
+html.dark .dropdown-menu [class*="bg-primary-light"] {
+  background-color: rgba(255, 112, 67, 0.22) !important;
+  color: #FF8A65 !important;
+}
+
+html.dark .dropdown-menu [class*="bg-secondary-light"] {
+  background-color: rgba(133, 107, 255, 0.22) !important;
+  color: #B4A5FF !important;
+}
+
+/* Global Light tint boxes in Dark Mode */
+html.dark .bg-primary-light,
+html.dark [class*="bg-primary-light"] {
+  background-color: rgba(255, 112, 67, 0.2) !important;
+}
+
+html.dark .bg-secondary-light,
+html.dark [class*="bg-secondary-light"] {
+  background-color: rgba(133, 107, 255, 0.2) !important;
+}
+
+html.dark .bg-accent-light,
+html.dark [class*="bg-accent-light"] {
+  background-color: rgba(255, 183, 77, 0.2) !important;
+}
+
+html.dark .bg-mint-light,
+html.dark [class*="bg-mint-light"] {
+  background-color: rgba(82, 214, 181, 0.2) !important;
+}
+
+/* Global Hover Tint utilities in Dark Mode */
+html.dark .hover\:bg-primary-light:hover {
+  background-color: rgba(255, 112, 67, 0.2) !important;
+}
+
+html.dark .hover\:bg-secondary-light:hover {
+  background-color: rgba(133, 107, 255, 0.2) !important;
+}
+
+html.dark .nav-link-item {
+  color: var(--text-main) !important;
+}
+
+html.dark .nav-link-item:hover,
+html.dark .nav-link-item.active,
+html.dark .nav-link-item.nav-link-active {
+  color: var(--wp-primary) !important;
+}
+
+html.dark .card-playful {
+  background-color: var(--surface-card);
+  border-color: var(--border);
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);
+}
+
+html.dark .card-playful:hover {
+  border-color: var(--primary);
+  box-shadow: 6px 6px 0px rgba(255, 112, 67, 0.3);
+}
+
+html.dark .form-input-playful {
+  background-color: #1C1730;
+  border-color: var(--border);
+  color: var(--text-main);
+}
+
+html.dark .form-input-playful:focus {
+  background-color: #211A38;
+  border-color: var(--primary);
+}
+
+html.dark .btn-white {
+  background-color: #211A38;
+  color: #FFFFFF !important;
+  border: 2px solid var(--border);
+}
+
+html.dark .btn-white:hover {
+  background-color: #2D234C;
+  border-color: var(--primary);
+}
+
+html.dark .blob-shape {
+  opacity: 0.22;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #352C54;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

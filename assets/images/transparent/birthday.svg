@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5B3FD3"/>
+      <stop offset="100%" stop-color="#FF7043"/>
+    </linearGradient>
+  </defs>
+  <circle cx="300" cy="250" r="180" fill="#F3F0FF" opacity="0.8"/>
+  <!-- Balloons -->
+  <circle cx="210" cy="130" r="38" fill="#FF7043"/>
+  <path d="M210 168 Q210 210 240 230" stroke="#FF7043" stroke-width="2" fill="none"/>
+  <circle cx="390" cy="120" r="42" fill="#5B3FD3"/>
+  <path d="M390 162 Q380 200 350 230" stroke="#5B3FD3" stroke-width="2" fill="none"/>
+  <circle cx="300" cy="90" r="35" fill="#FFB74D"/>
+  <path d="M300 125 L300 220" stroke="#FFB74D" stroke-width="2" fill="none"/>
+
+  <!-- Birthday Cake -->
+  <rect x="230" y="320" width="140" height="70" rx="14" fill="#FFFFFF" stroke="#FF7043" stroke-width="4"/>
+  <rect x="250" y="270" width="100" height="50" rx="10" fill="#FFF0EB" stroke="#5B3FD3" stroke-width="4"/>
+  <!-- Candles -->
+  <rect x="295" y="240" width="10" height="30" rx="4" fill="#FFB74D"/>
+  <circle cx="300" cy="230" r="8" fill="#FF7043"/>
+  <circle cx="300" cy="230" r="4" fill="#FFD54F"/>
+</svg>
