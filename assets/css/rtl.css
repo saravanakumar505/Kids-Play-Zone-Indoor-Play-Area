@@ -67,3 +67,30 @@ html[dir="rtl"] .wizard-step-line {
   left: auto;
   right: 50%;
 }
+
+/* Dashboard & Admin Sidebar Drawer RTL */
+html[dir="rtl"] #dashboard-sidebar,
+html[dir="rtl"] #admin-sidebar {
+  left: auto !important;
+  right: 0 !important;
+  border-right: none !important;
+  border-left: 1px solid var(--border) !important;
+  transform: translateX(100%) !important;
+}
+
+html[dir="rtl"] #dashboard-sidebar.drawer-open,
+html[dir="rtl"] #admin-sidebar.drawer-open {
+  transform: translateX(0) !important;
+}
+
+@media (min-width: 1024px) {
+  html[dir="rtl"] #dashboard-sidebar,
+  html[dir="rtl"] #admin-sidebar {
+    transform: none !important;
+    right: auto !important;
+    border-left: 1px solid var(--border) !important;
+    border-right: none !important;
+  }
+}
+
+

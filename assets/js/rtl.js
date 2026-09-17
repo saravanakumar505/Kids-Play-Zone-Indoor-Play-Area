@@ -23,7 +23,7 @@
       btn.setAttribute('aria-label', dir === 'rtl' ? 'Switch to LTR' : 'Switch to RTL');
       const text = btn.querySelector('.rtl-btn-text');
       if (text) {
-        text.textContent = dir === 'rtl' ? 'LTR' : 'RTL';
+        text.textContent = 'RTL';
       }
     });
 

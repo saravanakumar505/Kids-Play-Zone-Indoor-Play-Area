@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
@@ -60,7 +60,10 @@
 
   <!-- Admin Top Bar -->
   <header class="sticky top-0 z-30 bg-surface border-b border-border h-16 flex items-center px-4 sm:px-6 justify-between">
-    <div class="flex items-center gap-4">
+        <div class="flex items-center gap-3 sm:gap-4">
+      <button id="admin-hamburger-btn" class="lg:hidden p-2 -ml-2 rounded-xl text-text-main hover:bg-surface-alt transition flex items-center justify-center min-w-[44px] min-h-[44px]" aria-label="Open Admin Menu" aria-expanded="false" aria-controls="admin-sidebar">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
       <a href="../index.html" class="flex items-center gap-2">
         <img src="../assets/images/logo/wonderplay-logo.svg" alt="WonderPlay" class="h-9 w-auto dark:hidden" />
         <img src="../assets/images/logo/wonderplay-logo-dark.svg" alt="WonderPlay" class="h-9 w-auto hidden dark:block" />
@@ -93,60 +96,75 @@
     </div>
   </header>
 
-  <div class="flex-grow flex">
-            <!-- Admin Sidebar -->
-    <aside class="w-64 bg-surface border-r border-border p-4 hidden lg:flex flex-col justify-between shrink-0 overflow-y-auto max-h-[calc(100vh-4rem)]">
+    <div class="flex-grow flex relative">
+    <!-- Mobile Drawer Overlay -->
+    <div id="admin-drawer-overlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden lg:hidden transition-opacity duration-300 opacity-0" aria-hidden="true"></div>
+
+    <!-- Admin Sidebar -->
+    <aside id="admin-sidebar" class="fixed inset-y-0 left-0 z-50 w-72 max-w-[85vw] bg-surface border-r border-border p-4 flex flex-col justify-between shrink-0 transform -translate-x-full transition-transform duration-300 ease-in-out lg:static lg:w-64 lg:translate-x-0 lg:z-auto lg:transition-none overflow-y-auto max-h-screen lg:max-h-[calc(100vh-4rem)]">
       <div class="space-y-1">
+        <!-- Mobile Drawer Header with Close Button -->
+        <div class="flex items-center justify-between lg:hidden pb-3 mb-2 border-b border-border">
+          <div class="flex items-center gap-2">
+            <img src="../assets/images/logo/wonderplay-logo.svg" alt="WonderPlay" class="h-7 w-auto dark:hidden" />
+            <img src="../assets/images/logo/wonderplay-logo-dark.svg" alt="WonderPlay" class="h-7 w-auto hidden dark:block" />
+            <span class="text-xs font-bold text-primary font-heading">Admin Console</span>
+          </div>
+          <button id="admin-close-drawer-btn" class="p-2 rounded-xl text-text-muted hover:text-text-main hover:bg-surface-alt transition flex items-center justify-center min-w-[44px] min-h-[44px]" aria-label="Close Admin Menu">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+
         <div class="px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-text-muted">Management</div>
-        <a href="index.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+        <a href="index.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition text-text-main hover:bg-surface-alt hover:text-primary">
           <i data-lucide="bar-chart-3" class="w-4 h-4"></i>
           <span>Overview</span>
         </a>
-        <a href="parents.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition bg-primary text-white shadow-playful">
+        <a href="parents.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition bg-primary text-white">
           <i data-lucide="users" class="w-4 h-4"></i>
           <span>Parent Management</span>
         </a>
-        <a href="children.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+        <a href="children.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition text-text-main hover:bg-surface-alt hover:text-primary">
           <i data-lucide="baby" class="w-4 h-4"></i>
           <span>Children</span>
         </a>
-        <a href="bookings.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+        <a href="bookings.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition text-text-main hover:bg-surface-alt hover:text-primary">
           <i data-lucide="calendar-check" class="w-4 h-4"></i>
           <span>Bookings</span>
         </a>
-        <a href="play-zones.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+        <a href="play-zones.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition text-text-main hover:bg-surface-alt hover:text-primary">
           <i data-lucide="shapes" class="w-4 h-4"></i>
           <span>Play Zones</span>
         </a>
-        <a href="party-bookings.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+        <a href="party-bookings.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition text-text-main hover:bg-surface-alt hover:text-primary">
           <i data-lucide="cake" class="w-4 h-4"></i>
           <span>Birthday Parties</span>
         </a>
-        <a href="memberships.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+        <a href="memberships.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition text-text-main hover:bg-surface-alt hover:text-primary">
           <i data-lucide="award" class="w-4 h-4"></i>
           <span>Memberships</span>
         </a>
-        <a href="payments.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+        <a href="payments.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition text-text-main hover:bg-surface-alt hover:text-primary">
           <i data-lucide="credit-card" class="w-4 h-4"></i>
           <span>Payments</span>
         </a>
-        <a href="messages.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+        <a href="messages.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition text-text-main hover:bg-surface-alt hover:text-primary">
           <i data-lucide="message-square" class="w-4 h-4"></i>
           <span>Messages</span>
         </a>
-        <a href="reviews.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+        <a href="reviews.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition text-text-main hover:bg-surface-alt hover:text-primary">
           <i data-lucide="star" class="w-4 h-4"></i>
           <span>Reviews</span>
         </a>
-        <a href="reports.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+        <a href="reports.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition text-text-main hover:bg-surface-alt hover:text-primary">
           <i data-lucide="file-text" class="w-4 h-4"></i>
           <span>Reports</span>
         </a>
-        <a href="analytics.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+        <a href="analytics.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition text-text-main hover:bg-surface-alt hover:text-primary">
           <i data-lucide="line-chart" class="w-4 h-4"></i>
           <span>Analytics</span>
         </a>
-        <a href="settings.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold transition text-text-main hover:bg-surface-alt hover:text-primary">
+        <a href="settings.html" class="flex items-center gap-3 px-3 py-2 rounded-xl text-xs font-semibold min-h-[44px] transition text-text-main hover:bg-surface-alt hover:text-primary">
           <i data-lucide="settings" class="w-4 h-4"></i>
           <span>Settings</span>
         </a>

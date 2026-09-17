@@ -271,39 +271,40 @@
 
   <main class="flex-grow">
   <!-- SECTION 1: HERO -->
-  <section class="relative pt-16 pb-24 overflow-hidden bg-surface-alt/40 border-b border-border">
+  <section class="relative pt-16 pb-24 overflow-hidden border-b border-border">
+    <!-- Background Image Layer with Directional Gradient Overlay -->
     <div class="absolute inset-0 z-0">
-      <img src="../assets/images/hero/safety-hero.webp" alt="Safety" class="w-full h-full object-cover opacity-40 dark:opacity-25" />
-      <div class="absolute inset-0 hero-gradient-overlay bg-gradient-to-r from-surface/90 via-surface/85 to-surface/65"></div>
+      <img src="../assets/images/safety/safety-hero-bg.jpg" alt="" class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/85 via-slate-950/55 to-slate-950/10 dark:from-slate-950/80 dark:via-slate-950/50 dark:to-slate-950/15"></div>
     </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-7 space-y-6">
           <div class="inline-flex items-center gap-2 hero-badge-entry">
-            <span class="sticker-tag sticker-mint">100% Certified Safety</span>
-            <span class="sticker-tag sticker-primary">ASTM F1918-12 Compliant</span>
+            <span class="sticker-tag bg-white/95 text-mint dark:bg-slate-900/90 dark:text-mint font-bold">100% Certified Safety</span>
+            <span class="sticker-tag bg-white/95 text-primary dark:bg-slate-900/90 dark:text-primary font-bold">ASTM F1918-12 Compliant</span>
           </div>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-text-main font-heading leading-tight hero-heading-entry">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white font-heading leading-tight hero-heading-entry">
             Adventure Starts<br /><span class="text-primary">With Safety.</span>
           </h1>
-          <p class="text-lg text-text-muted max-w-xl leading-relaxed hero-desc-entry">
+          <p class="text-lg sm:text-xl text-white/90 max-w-xl leading-relaxed hero-desc-entry">
             Our multi-layered safety framework includes automated UV-C ball sanitization, shock-absorbing padding, RFID matching checkouts, and continuous supervision by certified First-Aid mentors.
           </p>
-          <div class="flex flex-wrap gap-4 pt-2 hero-cta-entry">
-            <a href="#safety-checklist" class="btn-playful btn-primary text-base py-3.5 px-8">
-              <i data-lucide="clipboard-check" class="w-5 h-5"></i>
-              <span>Daily Inspection Protocol</span>
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 hero-cta-entry">
+            <a href="#safety-checklist" class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl px-5 py-3 text-center font-semibold bg-primary text-white hover:bg-primary-hover transition-all duration-200">
+              <i data-lucide="clipboard-check" class="w-5 h-5 shrink-0" aria-hidden="true"></i>
+              <span class="text-center">Daily Inspection Protocol</span>
             </a>
-            <a href="#sanitization" class="btn-playful btn-outline-primary text-base py-3.5 px-7">
-              <i data-lucide="sparkles" class="w-5 h-5"></i>
-              <span>UV-C Sanitization</span>
+            <a href="#sanitization" class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl border border-white/80 bg-white/10 text-white hover:bg-white/20 dark:border-slate-700 dark:bg-slate-800/40 dark:text-white dark:hover:bg-slate-800 px-5 py-3 text-center font-semibold transition-all duration-200">
+              <i data-lucide="sparkles" class="w-5 h-5 shrink-0" aria-hidden="true"></i>
+              <span class="text-center">UV-C Sanitization</span>
             </a>
           </div>
         </div>
         <div class="lg:col-span-5 relative hero-img-entry">
           <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-surface card-asymmetric hero-visual">
-            <img src="../assets/images/hero/safety-hero.webp" alt="Certified Safety Attendant" class="w-full h-auto object-cover block" fetchpriority="high" />
+            <img src="../assets/images/safety/safety-hero-bg.jpg" alt="Certified Safety Playground" class="w-full h-auto object-cover block" fetchpriority="high" />
           </div>
           <!-- Transparent Floating Subject Badge -->
           <div class="absolute -bottom-6 -right-6 w-28 h-28 hidden sm:block hero-floating-subject z-20 pointer-events-none drop-shadow-xl">
@@ -314,14 +315,86 @@
     </div>
   </section>
 
-  <!-- SECTION 2: 100% SAFETY PROMISE -->
-  <section class="py-16 bg-surface border-b border-border shadow-sm">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-      <span class="sticker-tag sticker-secondary">Our Golden Promise</span>
-      <h2 class="text-3xl font-bold text-text-main font-heading">Zero Compromises on Child Well-Being</h2>
-      <p class="text-sm text-text-muted leading-relaxed">
-        Every slide curvature, netting weave density, and floor cushion rating at WonderPlay is inspected every morning before our doors open. We treat every child with the same meticulous protective care we give our own.
+  <!-- SECTION 2: OUR GOLDEN PROMISE -->
+  <section class="py-20 bg-surface/50 dark:bg-navy-950/40 border-b border-border">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16 space-y-4">
+      <span class="sticker-tag sticker-secondary inline-block">Our Golden Promise</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-text-main font-heading">
+        Safety First. Every Visit. Every Child.
+      </h2>
+      <p class="text-base sm:text-lg text-text-muted max-w-2xl mx-auto leading-relaxed">
+        Our comprehensive commitment ensures protected play spaces, hospital-grade sanitization, certified mentor supervision, and active parent visibility so families play with complete peace of mind.
       </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <!-- Card 1 -->
+        <div class="p-8 bg-surface rounded-3xl border border-border dark:border-slate-800 shadow-sm hover:border-primary/40 transition-all duration-200 group flex flex-col">
+          <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light flex items-center justify-center shrink-0 mb-5 group-hover:scale-105 transition-transform duration-200">
+            <i data-lucide="shield-check" class="w-7 h-7" aria-hidden="true"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-text-main mb-2">Trained Supervision</h3>
+          <p class="text-sm text-text-muted leading-relaxed flex-grow">
+            OSHA-certified play mentors and pediatric First-Aid responders actively monitor every play area continuously.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-8 bg-surface rounded-3xl border border-border dark:border-slate-800 shadow-sm hover:border-mint/40 transition-all duration-200 group flex flex-col">
+          <div class="w-14 h-14 rounded-2xl bg-mint/10 text-mint dark:bg-mint/20 dark:text-mint flex items-center justify-center shrink-0 mb-5 group-hover:scale-105 transition-transform duration-200">
+            <i data-lucide="sparkles" class="w-7 h-7" aria-hidden="true"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-text-main mb-2">Clean &amp; Sanitized</h3>
+          <p class="text-sm text-text-muted leading-relaxed flex-grow">
+            Hospital-grade UV-C ball sanitization, HEPA air filtration, and non-toxic surface cleanings performed hourly.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-8 bg-surface rounded-3xl border border-border dark:border-slate-800 shadow-sm hover:border-secondary/40 transition-all duration-200 group flex flex-col">
+          <div class="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary dark:bg-secondary/20 dark:text-secondary flex items-center justify-center shrink-0 mb-5 group-hover:scale-105 transition-transform duration-200">
+            <i data-lucide="layers" class="w-7 h-7" aria-hidden="true"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-text-main mb-2">Secure Play Zones</h3>
+          <p class="text-sm text-text-muted leading-relaxed flex-grow">
+            Enclosed age-appropriate zones prevent collision risks, giving toddlers and older children separate safe spaces.
+          </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="p-8 bg-surface rounded-3xl border border-border dark:border-slate-800 shadow-sm hover:border-primary/40 transition-all duration-200 group flex flex-col">
+          <div class="w-14 h-14 rounded-2xl bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary-light flex items-center justify-center shrink-0 mb-5 group-hover:scale-105 transition-transform duration-200">
+            <i data-lucide="check-circle" class="w-7 h-7" aria-hidden="true"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-text-main mb-2">Safety-First Equipment</h3>
+          <p class="text-sm text-text-muted leading-relaxed flex-grow">
+            ASTM F1918-12 compliant equipment, flame-retardant foam cushions, and rounded impact-absorbing edges everywhere.
+          </p>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="p-8 bg-surface rounded-3xl border border-border dark:border-slate-800 shadow-sm hover:border-mint/40 transition-all duration-200 group flex flex-col">
+          <div class="w-14 h-14 rounded-2xl bg-mint/10 text-mint dark:bg-mint/20 dark:text-mint flex items-center justify-center shrink-0 mb-5 group-hover:scale-105 transition-transform duration-200">
+            <i data-lucide="eye" class="w-7 h-7" aria-hidden="true"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-text-main mb-2">Parent Visibility</h3>
+          <p class="text-sm text-text-muted leading-relaxed flex-grow">
+            Open-sightline architecture, clear vantage cafes, and live parent lounge displays keep guardians closely connected.
+          </p>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="p-8 bg-surface rounded-3xl border border-border dark:border-slate-800 shadow-sm hover:border-secondary/40 transition-all duration-200 group flex flex-col">
+          <div class="w-14 h-14 rounded-2xl bg-secondary/10 text-secondary dark:bg-secondary/20 dark:text-secondary flex items-center justify-center shrink-0 mb-5 group-hover:scale-105 transition-transform duration-200">
+            <i data-lucide="heart-pulse" class="w-7 h-7" aria-hidden="true"></i>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-text-main mb-2">Emergency Ready</h3>
+          <p class="text-sm text-text-muted leading-relaxed flex-grow">
+            Certified pediatric CPR personnel, direct clinic hotlines, and instant panic-lock perimeter gate protocols.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -429,20 +502,44 @@
   <!-- SECTION 5: RFID SECURITY CHECKOUT SYSTEM -->
   <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-6 order-2 lg:order-1">
-          <img src="../assets/images/safety/clean-sanitized.webp" alt="Reception check-in wristbands" class="rounded-3xl shadow-xl border-4 border-surface w-full h-auto object-cover" />
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch">
+        <div class="order-2 lg:order-1 flex">
+          <div class="relative w-full h-72 sm:h-80 lg:h-full min-h-[320px] overflow-hidden rounded-3xl border-4 border-surface shadow-xl">
+            <img
+              src="../assets/images/safety/smart-security.jpg"
+              alt="Child and parent receiving matching secure RFID check-in wristbands"
+              class="block h-full w-full object-cover object-center"
+              loading="lazy"
+            />
+          </div>
         </div>
-        <div class="lg:col-span-6 order-1 lg:order-2 space-y-6">
-          <span class="sticker-tag sticker-secondary">Smart Security</span>
-          <h2 class="text-3xl sm:text-4xl font-bold text-text-main font-heading">RFID Matching Wristband Check-In</h2>
-          <p class="text-text-muted leading-relaxed">
+        <div class="order-1 lg:order-2 flex flex-col justify-center space-y-6">
+          <span class="sticker-tag sticker-secondary self-start">Smart Security</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-text-main font-heading leading-tight">
+            RFID Matching Wristband Check-In
+          </h2>
+          <p class="text-text-muted leading-relaxed text-base sm:text-lg">
             Every child and guardian receives encrypted matching RFID wristbands upon check-in. Our automated turnstile and exit security team verify that a child's band matches their guardian's band before anyone can exit the arena.
           </p>
-          <ul class="space-y-2.5 text-xs text-text-muted">
-            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-secondary shrink-0"></i> No child exits without matched guardian authorization</li>
-            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-secondary shrink-0"></i> Digital photo ID verification on file in Parent Portal</li>
-            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-secondary shrink-0"></i> Panic lock gate system on all perimeter emergency doors</li>
+          <ul class="space-y-3 text-sm text-text-muted">
+            <li class="flex items-center gap-3">
+              <div class="w-6 h-6 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+                <i data-lucide="check-circle" class="w-4 h-4" aria-hidden="true"></i>
+              </div>
+              <span>No child exits without matched guardian authorization</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-6 h-6 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+                <i data-lucide="check-circle" class="w-4 h-4" aria-hidden="true"></i>
+              </div>
+              <span>Digital photo ID verification on file in Parent Portal</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="w-6 h-6 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+                <i data-lucide="check-circle" class="w-4 h-4" aria-hidden="true"></i>
+              </div>
+              <span>Panic lock gate system on all perimeter emergency doors</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -517,8 +614,12 @@
       <h2 class="text-3xl sm:text-5xl font-bold font-heading text-white">Safe Play Starts with You</h2>
       <p class="text-white/85 max-w-xl mx-auto text-base">Sign your electronic safety waiver online ahead of time and get ready for a worry-free day of joyful family adventure.</p>
       <div class="flex flex-wrap justify-center gap-4 pt-2">
-        <a href="../dashboard/book-visit.html" class="btn-playful btn-primary text-base py-3.5 px-8">Sign Waiver &amp; Book Visit</a>
-        <a href="contact.html" class="btn-playful btn-white text-base py-3.5 px-7">Speak with Safety Lead</a>
+        <a href="../dashboard/book-visit.html" class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl px-6 py-3 text-center font-semibold bg-primary text-white hover:bg-primary-hover transition-all duration-200">
+          <span class="text-center">Sign Waiver &amp; Book Visit</span>
+        </a>
+        <a href="contact.html" class="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-xl border border-white bg-white text-secondary hover:bg-white/90 px-6 py-3 text-center font-semibold transition-all duration-200">
+          <span class="text-center">Speak with Safety Lead</span>
+        </a>
       </div>
     </div>
   </section>

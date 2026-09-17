@@ -271,26 +271,34 @@
 
   <main class="flex-grow">
   <!-- SECTION 1: HERO WITH SEARCH -->
-  <section class="relative pt-16 pb-24 overflow-hidden bg-surface-alt/40 border-b border-border text-center">
-    <div class="absolute inset-0 z-0">
-      <img src="../assets/images/hero/blog-hero.webp" alt="WonderPlay Journal Background" class="w-full h-full object-cover opacity-40 dark:opacity-25" />
-      <div class="absolute inset-0 bg-gradient-to-b from-surface/90 via-surface/85 to-surface/95"></div>
-    </div>
+  <section class="relative pt-16 pb-24 overflow-hidden border-b border-border text-center">
+    <!-- Background image -->
+    <img
+      src="../assets/images/hero/blog-hero.webp"
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover object-center"
+    />
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <span class="sticker-tag sticker-primary mb-3 hero-badge-entry">WonderPlay Journal</span>
-      <h1 class="text-4xl sm:text-6xl font-bold text-text-main font-heading mb-4 hero-heading-entry">Parenting, Play &amp; Child Growth</h1>
-      <p class="text-base text-text-muted max-w-xl mx-auto mb-8 hero-desc-entry">Pediatric insights, motor skill development guides, screen-free weekend tips, and stress-free birthday blueprints.</p>
+    <!-- Gradient overlay -->
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-slate-950/75 via-slate-950/45 to-slate-950/15 dark:from-slate-950/75 dark:via-slate-950/45 dark:to-slate-950/15"
+    ></div>
+
+    <!-- Hero content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="sticker-tag bg-white/95 text-primary dark:bg-slate-900/90 dark:text-primary font-bold mb-3 hero-badge-entry">WonderPlay Journal</span>
+      <h1 class="text-4xl sm:text-6xl font-bold font-heading text-white mb-4 hero-heading-entry drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">Parenting, Play &amp; Child Growth</h1>
+      <p class="text-base sm:text-lg text-white/90 max-w-xl mx-auto mb-8 hero-desc-entry drop-shadow-[0_1px_4px_rgba(0,0,0,0.4)]">Pediatric insights, motor skill development guides, screen-free weekend tips, and stress-free birthday blueprints.</p>
 
       <!-- Search Bar -->
       <div class="max-w-xl mx-auto mb-8 relative hero-cta-entry">
-        <input type="text" placeholder="Search parenting guides, play tips &amp; activities..." class="form-input-playful text-sm pl-12 pr-4 py-3 shadow-md" />
+        <input type="text" placeholder="Search parenting guides, play tips &amp; activities..." class="form-input-playful text-sm pl-12 pr-4 py-3 bg-white/95 dark:bg-slate-900/95" />
         <i data-lucide="search" class="w-5 h-5 text-text-muted absolute left-4 top-3.5"></i>
       </div>
 
       <!-- 8 Category Filter Pills -->
       <div class="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
-        <button class="px-4 py-2 rounded-full text-xs font-bold bg-primary text-white shadow-sm">All Articles (12)</button>
+        <button class="px-4 py-2 rounded-full text-xs font-bold bg-primary text-white">All Articles (12)</button>
         <button class="px-4 py-2 rounded-full text-xs font-bold bg-surface border border-border text-text-main hover:border-primary">Parenting Tips</button>
         <button class="px-4 py-2 rounded-full text-xs font-bold bg-surface border border-border text-text-main hover:border-primary">Play Ideas</button>
         <button class="px-4 py-2 rounded-full text-xs font-bold bg-surface border border-border text-text-main hover:border-primary">Birthday Planning</button>

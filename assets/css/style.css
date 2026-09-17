@@ -278,16 +278,9 @@ html.dark .nav-link-item.nav-link-active {
 .hero-desc-entry,
 section.relative p.hero-desc-entry,
 p.hero-desc-entry {
-  color: #2D2744 !important; /* Deep, rich high-contrast dark text in light mode */
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 1.7;
-}
-
-html.dark .hero-desc-entry,
-html.dark section.relative p.hero-desc-entry,
-html.dark p.hero-desc-entry {
-  color: #F1F5F9 !important; /* Crisp, bright slate text in dark mode */
 }
 
 /* Mobile Drawer Nav Active State */
@@ -365,17 +358,37 @@ html[dir="rtl"] .footer-link-item.footer-link-active::before {
   margin-left: 6px;
 }
 
-/* Sidebar Active */
-.sidebar-nav-link.active {
+/* Sidebar Active (Admin Portal) */
+aside:not(#dashboard-sidebar) .sidebar-nav-link.active {
   background-color: rgba(255, 112, 67, 0.12) !important;
   color: var(--wp-primary) !important;
   font-weight: 700;
   border-left: 3px solid var(--wp-primary);
 }
 
-html[dir="rtl"] .sidebar-nav-link.active {
+html[dir="rtl"] aside:not(#dashboard-sidebar) .sidebar-nav-link.active {
   border-left: none;
   border-right: 3px solid var(--wp-primary);
+}
+
+/* Parent Portal: Inactive sidebar links have NO background color (only active is colored) */
+#dashboard-sidebar a:not(.active),
+#dashboard-sidebar a.sidebar-nav-link:not(.active) {
+  background-color: transparent !important;
+}
+
+#dashboard-sidebar a:hover:not(.active),
+#dashboard-sidebar a.sidebar-nav-link:hover:not(.active) {
+  background-color: var(--primary-light) !important;
+  color: var(--primary) !important;
+}
+
+#dashboard-sidebar a.active,
+#dashboard-sidebar a.sidebar-nav-link.active {
+  background-color: var(--primary) !important;
+  color: #FFFFFF !important;
+  border-left: none !important;
+  border-right: none !important;
 }
 
 /* ==========================================================================
@@ -389,37 +402,41 @@ html[dir="rtl"] .sidebar-nav-link.active {
   gap: 0.5rem;
   font-family: 'Fredoka', cursive, sans-serif;
   font-weight: 600;
-  border-radius: var(--radius-full);
-  padding: 0.75rem 1.75rem;
-  transition: all var(--transition-normal);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1.5rem;
+  transition: all 200ms ease;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   text-decoration: none;
   min-height: 44px;
   min-width: 44px;
   position: relative;
   overflow: hidden;
+  text-align: center;
+  box-shadow: none !important;
 }
 
 .btn-playful:focus-visible {
-  outline: 3px solid var(--border-focus);
+  outline: 2px solid var(--border-focus);
   outline-offset: 2px;
 }
 
 .btn-playful:active {
-  transform: scale(0.97);
+  transform: scale(0.98);
 }
 
 .btn-primary {
   background-color: var(--primary);
-  color: #FFFFFF;
-  box-shadow: var(--shadow-playful);
+  color: #FFFFFF !important;
+  border: 1px solid transparent;
+  box-shadow: none !important;
 }
 
 .btn-primary:hover {
   background-color: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-playful-hover);
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+  box-shadow: none !important;
 }
 
 /* Button CTA Sweep Shine */
@@ -441,49 +458,59 @@ html[dir="rtl"] .sidebar-nav-link.active {
 
 .btn-secondary {
   background-color: var(--secondary);
-  color: #FFFFFF;
-  box-shadow: var(--shadow-playful-secondary);
+  color: #FFFFFF !important;
+  border: 1px solid transparent;
+  box-shadow: none !important;
 }
 
 .btn-secondary:hover {
   background-color: var(--secondary-hover);
-  transform: translateY(-2px);
-  box-shadow: 6px 6px 0px rgba(91, 63, 211, 0.3);
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+  box-shadow: none !important;
 }
 
 .btn-accent {
   background-color: var(--accent);
-  color: #211A38;
-  box-shadow: var(--shadow-playful-accent);
+  color: #211A38 !important;
+  border: 1px solid transparent;
+  box-shadow: none !important;
 }
 
 .btn-accent:hover {
   background-color: var(--accent-hover);
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+  box-shadow: none !important;
 }
 
 .btn-white {
   background-color: #FFFFFF;
-  color: var(--text-main);
-  border: 2px solid var(--border);
-  box-shadow: var(--shadow-sm);
+  color: #0F172A !important;
+  border: 1px solid #E2E8F0;
+  box-shadow: none !important;
 }
 
 .btn-white:hover {
-  background-color: var(--surface-alt);
-  border-color: var(--primary);
-  transform: translateY(-2px);
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+  color: var(--primary) !important;
+  transform: translateY(-1px);
+  box-shadow: none !important;
 }
 
 .btn-outline-primary {
-  background-color: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  background-color: #FFFFFF;
+  color: #0F172A !important;
+  border: 1.5px solid #CBD5E1;
+  box-shadow: none !important;
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--primary-light);
-  transform: translateY(-2px);
+  background-color: #F8FAFC;
+  color: var(--primary) !important;
+  border-color: var(--primary);
+  transform: translateY(-1px);
+  box-shadow: none !important;
 }
 
 /* Cards & Image Zoom */
@@ -887,3 +914,67 @@ html[dir="rtl"] .sidebar-nav-link.active {
 .hero-gradient-overlay {
   background: linear-gradient(to right, rgba(255, 248, 240, 0.94) 0%, rgba(255, 248, 240, 0.88) 50%, rgba(255, 248, 240, 0.72) 100%);
 }
+
+/* ==========================================================================
+   Dashboard Components: Timeline & Mobile Drawer
+   ========================================================================== */
+.timeline-item {
+  position: relative;
+  padding-left: 36px;
+  padding-bottom: 24px;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 14px;
+  bottom: -4px;
+  width: 2px;
+  background-color: var(--border);
+}
+
+.timeline-item:last-child::before {
+  display: none;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--surface-alt);
+  border: 2px solid var(--border);
+  z-index: 1;
+}
+
+.timeline-item.done .timeline-dot {
+  background-color: #10B981;
+  border-color: #10B981;
+}
+
+.timeline-item.done::before {
+  background-color: #10B981;
+}
+
+.timeline-item.active .timeline-dot {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Dashboard Sidebar Drawer Transitions */
+#dashboard-sidebar.drawer-open,
+#admin-sidebar.drawer-open {
+  transform: translateX(0) !important;
+}
+
+

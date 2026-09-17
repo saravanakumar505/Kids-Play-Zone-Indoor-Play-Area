@@ -106,10 +106,9 @@ html.dark .text-text-main {
   color: #FFFFFF !important;
 }
 
-/* Hero Gradient Overlay in Dark Mode */
-html.dark .hero-gradient-overlay,
-html.dark [class*="from-surface"] {
-  background: linear-gradient(to right, rgba(21, 21, 43, 0.94) 0%, rgba(21, 21, 43, 0.88) 50%, rgba(21, 21, 43, 0.72) 100%) !important;
+/* Hero Gradient Overlay in Dark Mode - Translucent navy overlay so image remains recognizable */
+html.dark .hero-gradient-overlay {
+  background: linear-gradient(to right, rgba(21, 21, 43, 0.55) 0%, rgba(21, 21, 43, 0.50) 50%, rgba(21, 21, 43, 0.40) 100%) !important;
 }
 
 /* Sticker Tags in Dark Mode - High Contrast */
@@ -204,22 +203,22 @@ html.dark .dropdown-menu [class*="bg-secondary-light"] {
 
 /* Global Light tint boxes in Dark Mode */
 html.dark .bg-primary-light,
-html.dark [class*="bg-primary-light"] {
+html.dark [class~="bg-primary-light"] {
   background-color: rgba(255, 112, 67, 0.2) !important;
 }
 
 html.dark .bg-secondary-light,
-html.dark [class*="bg-secondary-light"] {
+html.dark [class~="bg-secondary-light"] {
   background-color: rgba(133, 107, 255, 0.2) !important;
 }
 
 html.dark .bg-accent-light,
-html.dark [class*="bg-accent-light"] {
+html.dark [class~="bg-accent-light"] {
   background-color: rgba(255, 183, 77, 0.2) !important;
 }
 
 html.dark .bg-mint-light,
-html.dark [class*="bg-mint-light"] {
+html.dark [class~="bg-mint-light"] {
   background-color: rgba(82, 214, 181, 0.2) !important;
 }
 
@@ -242,15 +241,137 @@ html.dark .nav-link-item.nav-link-active {
   color: var(--wp-primary) !important;
 }
 
-html.dark .card-playful {
-  background-color: var(--surface-card);
-  border-color: var(--border);
+html.dark .card-playful:not([class*="bg-primary"]):not([class*="bg-secondary"]):not([class*="bg-accent"]):not([class*="bg-mint"]) {
+  background-color: var(--surface-card) !important;
+  border-color: var(--border) !important;
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);
 }
 
-html.dark .card-playful:hover {
-  border-color: var(--primary);
+html.dark .card-playful:not([class*="bg-primary"]):not([class*="bg-secondary"]):not([class*="bg-accent"]):not([class*="bg-mint"]):hover {
+  border-color: var(--primary) !important;
   box-shadow: 6px 6px 0px rgba(255, 112, 67, 0.3);
+}
+
+/* Secondary text high-contrast enhancement in dark mode */
+html.dark .text-secondary {
+  color: #B4A5FF !important;
+}
+
+/* Dashboard Specific Layout Containers */
+html.dark #dashboard-sidebar,
+html.dark #admin-sidebar {
+  background-color: #1A142E !important;
+  border-color: #352C54 !important;
+}
+
+/* Inactive Sidebar Links: No background color in Parent Portal */
+#dashboard-sidebar a:not(.active),
+#dashboard-sidebar a.sidebar-nav-link:not(.active),
+html.dark #dashboard-sidebar a:not(.active),
+html.dark #dashboard-sidebar a.sidebar-nav-link:not(.active) {
+  background-color: transparent !important;
+  color: var(--text-main) !important;
+}
+
+#dashboard-sidebar a:hover:not(.active),
+#dashboard-sidebar a.sidebar-nav-link:hover:not(.active) {
+  background-color: var(--primary-light) !important;
+  color: var(--primary) !important;
+}
+
+html.dark #dashboard-sidebar a:hover:not(.active),
+html.dark #dashboard-sidebar a.sidebar-nav-link:hover:not(.active) {
+  background-color: rgba(255, 112, 67, 0.15) !important;
+  color: #FF8A65 !important;
+}
+
+#dashboard-sidebar a.active,
+#dashboard-sidebar a.sidebar-nav-link.active,
+html.dark #dashboard-sidebar a.active,
+html.dark #dashboard-sidebar a.sidebar-nav-link.active {
+  background-color: #FF7043 !important;
+  color: #FFFFFF !important;
+}
+
+html.dark header {
+  background-color: #1A142E !important;
+  border-color: #352C54 !important;
+}
+
+/* Progress bar background tracks */
+html.dark .bg-border {
+  background-color: #2E2648 !important;
+}
+
+/* Form inputs & Native Date Picker Calendar Icon */
+html.dark input,
+html.dark select,
+html.dark textarea {
+  color-scheme: dark !important;
+}
+
+html.dark input[type="date"]::-webkit-calendar-picker-indicator,
+html.dark input[type="time"]::-webkit-calendar-picker-indicator,
+html.dark input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(0.85) brightness(1.2);
+  cursor: pointer;
+}
+
+/* Badges & Status Pills in Dark Mode */
+html.dark .bg-emerald-100 {
+  background-color: rgba(16, 185, 129, 0.2) !important;
+  color: #6EE7B7 !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+}
+
+html.dark .bg-indigo-100 {
+  background-color: rgba(99, 102, 241, 0.2) !important;
+  color: #A5B4FC !important;
+  border: 1px solid rgba(99, 102, 241, 0.35) !important;
+}
+
+html.dark .bg-slate-100,
+html.dark .bg-gray-100 {
+  background-color: rgba(148, 163, 184, 0.18) !important;
+  color: #CBD5E1 !important;
+  border: 1px solid rgba(148, 163, 184, 0.25) !important;
+}
+
+html.dark .bg-red-100 {
+  background-color: rgba(239, 68, 68, 0.2) !important;
+  color: #FCA5A5 !important;
+  border: 1px solid rgba(239, 68, 68, 0.35) !important;
+}
+
+html.dark .bg-amber-100,
+html.dark .bg-yellow-100 {
+  background-color: rgba(245, 158, 11, 0.2) !important;
+  color: #FCD34D !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important;
+}
+
+/* Timeline in Dark Mode */
+html.dark .timeline-item::before {
+  background-color: #352C54;
+}
+
+html.dark .timeline-dot {
+  background-color: #1C1730;
+  border-color: #352C54;
+}
+
+html.dark .timeline-item.done .timeline-dot {
+  background-color: #10B981;
+  border-color: #10B981;
+}
+
+html.dark .timeline-item.done::before {
+  background-color: #10B981;
+}
+
+html.dark .timeline-item.active .timeline-dot {
+  background-color: var(--primary);
+  border-color: var(--primary);
 }
 
 html.dark .form-input-playful {
@@ -264,15 +385,27 @@ html.dark .form-input-playful:focus {
   border-color: var(--primary);
 }
 
-html.dark .btn-white {
-  background-color: #211A38;
+html.dark .btn-white,
+html.dark .btn-outline-primary {
+  background-color: #1C1730 !important;
   color: #FFFFFF !important;
-  border: 2px solid var(--border);
+  border: 1px solid #352C54 !important;
+  box-shadow: none !important;
 }
 
-html.dark .btn-white:hover {
-  background-color: #2D234C;
-  border-color: var(--primary);
+html.dark .btn-white:hover,
+html.dark .btn-outline-primary:hover {
+  background-color: #2D234C !important;
+  border-color: var(--primary) !important;
+  color: #FFFFFF !important;
+  box-shadow: none !important;
+}
+
+html.dark .btn-primary,
+html.dark .btn-secondary,
+html.dark .btn-accent,
+html.dark .btn-playful {
+  box-shadow: none !important;
 }
 
 html.dark .blob-shape {
@@ -290,3 +423,4 @@ html.dark ::-webkit-scrollbar-thumb {
 html.dark ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
 }
+

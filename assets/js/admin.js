@@ -94,4 +94,117 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // Initialize Responsive Mobile/Tablet Admin Drawer Navigation
+  initAdminDrawer();
 });
+
+if (document.readyState !== 'loading') {
+  initAdminDrawer();
+}
+
+/**
+ * Responsive Side Navigation Drawer for Admin Console
+ * Supports mobile and tablet screen widths, smooth transitions, overlay, and keyboard navigation.
+ */
+let adminDrawerInitialized = false;
+function initAdminDrawer() {
+  window.initAdminDrawer = initAdminDrawer;
+  if (adminDrawerInitialized) return;
+
+  const hamburgerBtn = document.getElementById('admin-hamburger-btn');
+  const sidebar = document.getElementById('admin-sidebar');
+  const overlay = document.getElementById('admin-drawer-overlay');
+  const closeBtn = document.getElementById('admin-close-drawer-btn');
+
+  if (!sidebar || !hamburgerBtn) return;
+  adminDrawerInitialized = true;
+
+  if (window.lucide && typeof window.lucide.createIcons === 'function') {
+    try {
+      window.lucide.createIcons();
+    } catch (err) {
+      console.warn('Lucide icon error', err);
+    }
+  }
+
+  function openDrawer() {
+    sidebar.classList.add('drawer-open');
+    if (overlay) {
+      overlay.classList.remove('hidden');
+      void overlay.offsetWidth; // Force reflow for smooth opacity transition
+      overlay.classList.remove('opacity-0');
+      overlay.classList.add('opacity-100');
+    }
+    if (hamburgerBtn) {
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+    }
+    document.body.classList.add('overflow-hidden', 'lg:overflow-auto');
+  }
+
+  function closeDrawer() {
+    sidebar.classList.remove('drawer-open');
+    if (overlay) {
+      overlay.classList.remove('opacity-100');
+      overlay.classList.add('opacity-0');
+      setTimeout(() => {
+        if (!sidebar.classList.contains('drawer-open')) {
+          overlay.classList.add('hidden');
+        }
+      }, 300);
+    }
+    if (hamburgerBtn) {
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+    document.body.classList.remove('overflow-hidden', 'lg:overflow-auto');
+  }
+
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = sidebar.classList.contains('drawer-open');
+      if (isOpen) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeDrawer();
+    });
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      closeDrawer();
+    });
+  }
+
+  // Keyboard accessibility: ESC closes the drawer
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar.classList.contains('drawer-open')) {
+      closeDrawer();
+    }
+  });
+
+  // Close drawer when clicking any link inside sidebar on mobile/tablet viewports (< 1024px)
+  sidebar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 1024) {
+        closeDrawer();
+      }
+    });
+  });
+
+  // Close drawer if window is resized to desktop width (>= 1024px)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024 && sidebar.classList.contains('drawer-open')) {
+      closeDrawer();
+    }
+  });
+}
+

@@ -216,11 +216,11 @@ function initZoneFilter() {
       const ageGroup = btn.getAttribute('data-filter');
 
       filterBtns.forEach(b => {
-        b.classList.remove('bg-primary', 'text-white', 'shadow-playful');
+        b.classList.remove('bg-primary', 'text-white');
         b.classList.add('bg-white', 'text-text-main', 'dark:bg-surface');
       });
 
-      btn.classList.add('bg-primary', 'text-white', 'shadow-playful');
+      btn.classList.add('bg-primary', 'text-white');
       btn.classList.remove('bg-white', 'text-text-main', 'dark:bg-surface');
 
       zoneCards.forEach(card => {

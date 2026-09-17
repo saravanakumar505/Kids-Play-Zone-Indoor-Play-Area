@@ -70,4 +70,108 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Initialize Responsive Mobile/Tablet Dashboard Drawer Navigation
+  initDashboardDrawer();
 });
+
+/**
+ * Responsive Side Navigation Drawer for Parent Portal Dashboard
+ * Supports 360px and 768px viewports, LTR/RTL, smooth transitions, overlay, and keyboard navigation.
+ */
+function initDashboardDrawer() {
+  const hamburgerBtn = document.getElementById('dashboard-hamburger-btn');
+  const sidebar = document.getElementById('dashboard-sidebar');
+  const overlay = document.getElementById('dashboard-drawer-overlay');
+  const closeBtn = document.getElementById('dashboard-close-drawer-btn');
+
+  if (window.lucide && typeof window.lucide.createIcons === 'function') {
+    try {
+      window.lucide.createIcons();
+    } catch (err) {
+      console.warn('Lucide icon error', err);
+    }
+  }
+
+  if (!sidebar) return;
+
+  function openDrawer() {
+    sidebar.classList.add('drawer-open');
+    if (overlay) {
+      overlay.classList.remove('hidden');
+      void overlay.offsetWidth; // Force reflow for smooth opacity transition
+      overlay.classList.remove('opacity-0');
+      overlay.classList.add('opacity-100');
+    }
+    if (hamburgerBtn) {
+      hamburgerBtn.setAttribute('aria-expanded', 'true');
+    }
+    document.body.classList.add('overflow-hidden', 'lg:overflow-auto');
+  }
+
+  function closeDrawer() {
+    sidebar.classList.remove('drawer-open');
+    if (overlay) {
+      overlay.classList.remove('opacity-100');
+      overlay.classList.add('opacity-0');
+      setTimeout(() => {
+        if (!sidebar.classList.contains('drawer-open')) {
+          overlay.classList.add('hidden');
+        }
+      }, 300);
+    }
+    if (hamburgerBtn) {
+      hamburgerBtn.setAttribute('aria-expanded', 'false');
+    }
+    document.body.classList.remove('overflow-hidden', 'lg:overflow-auto');
+  }
+
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = sidebar.classList.contains('drawer-open');
+      if (isOpen) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    });
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeDrawer();
+    });
+  }
+
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      closeDrawer();
+    });
+  }
+
+  // Keyboard accessibility: ESC closes the drawer
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sidebar.classList.contains('drawer-open')) {
+      closeDrawer();
+    }
+  });
+
+  // Close drawer when clicking any link inside sidebar on mobile/tablet viewports (< 1024px)
+  sidebar.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 1024) {
+        closeDrawer();
+      }
+    });
+  });
+
+  // Close drawer if window is resized to desktop width (>= 1024px)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1024 && sidebar.classList.contains('drawer-open')) {
+      closeDrawer();
+    }
+  });
+}
+

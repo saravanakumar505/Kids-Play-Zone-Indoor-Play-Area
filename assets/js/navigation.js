@@ -115,7 +115,10 @@
     sidebarLinks.forEach(link => {
       const href = link.getAttribute('href')?.toLowerCase().replace(/\\/g, '/');
       if (!href) return;
-      const linkFile = href.split('/').pop();
+      const linkFile = href.split('/').pop().split('?')[0].split('#')[0];
+
+      // Exclude sign-out button
+      if (href.includes('login.html')) return;
 
       let isSidebarActive = false;
       if (linkFile === currentFile) {
@@ -130,12 +133,55 @@
         isSidebarActive = true;
       }
 
-      if (isSidebarActive) {
-        link.classList.add('active');
-        link.setAttribute('aria-current', 'page');
+      if (link.closest('#dashboard-sidebar') || link.classList.contains('sidebar-nav-link')) {
+        if (isSidebarActive) {
+          link.classList.remove('text-text-main', 'hover:bg-primary-light', 'hover:text-primary');
+          link.classList.add('bg-primary', 'text-white', 'active');
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.classList.remove('bg-primary', 'text-white', 'active');
+          link.classList.add('text-text-main', 'hover:bg-primary-light', 'hover:text-primary');
+          link.removeAttribute('aria-current');
+        }
+      } else if (link.closest('#admin-sidebar')) {
+        if (isSidebarActive) {
+          link.classList.remove('text-text-main', 'hover:bg-surface-alt', 'hover:text-primary');
+          link.classList.add('bg-primary', 'text-white', 'active');
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.classList.remove('bg-primary', 'text-white', 'active');
+          link.classList.add('text-text-main', 'hover:bg-surface-alt', 'hover:text-primary');
+          link.removeAttribute('aria-current');
+        }
       } else {
-        link.classList.remove('active');
-        link.removeAttribute('aria-current');
+        if (isSidebarActive) {
+          link.classList.add('active');
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.classList.remove('active');
+          link.removeAttribute('aria-current');
+        }
+      }
+    });
+
+    // --- 1.4 Dashboard Mobile Quick Bar Links ---
+    const quickBarLinks = document.querySelectorAll('main .overflow-x-auto a');
+    quickBarLinks.forEach(link => {
+      const href = link.getAttribute('href')?.toLowerCase().replace(/\\/g, '/');
+      if (!href) return;
+      const linkFile = href.split('/').pop().split('?')[0].split('#')[0];
+
+      let isQuickActive = (linkFile === currentFile);
+      if (currentFile === 'book-session.html' && (linkFile === 'book-visit.html' || linkFile === 'book-session.html')) isQuickActive = true;
+      if (currentFile === 'memberships.html' && (linkFile === 'membership.html' || linkFile === 'memberships.html')) isQuickActive = true;
+      if ((currentFile === 'birthday-bookings.html' || currentFile === 'party-bookings.html') && (linkFile === 'birthday-parties.html' || linkFile === 'birthday-bookings.html' || linkFile === 'party-bookings.html')) isQuickActive = true;
+
+      if (isQuickActive) {
+        link.classList.remove('bg-surface', 'border', 'border-border', 'text-text-main');
+        link.classList.add('bg-primary', 'text-white');
+      } else {
+        link.classList.remove('bg-primary', 'text-white');
+        link.classList.add('bg-surface', 'border', 'border-border', 'text-text-main');
       }
     });
   }
